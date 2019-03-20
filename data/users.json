@@ -1,0 +1,180 @@
+{
+  "apikey":         "APIKEY from API, or other Identifier from Salesforce",
+  "full_name":      "Steve Example",
+  "first_name":     "Steve",
+  "last_name":      "Example",
+  "email":          "example@example.com",
+  "mask_email":     "e*****e@e******.com",
+  "phone":          "(555) 555-5555",
+  "mask_phone":     "******5555",
+  "contact_2fa_preference": "email",
+  "program_status":         "Active Client",
+  "bank_processor_url":     "https://www.processor_url.com/",
+  "balance":  {
+    "total_debt":       5350.0,
+    "total_balance":    4000.55
+  },
+  "next_drafts": [
+    {
+      "apikey":     "APIKEY from API, or other Identifier from Salesforce",
+      "amount":     100.0,
+      "date":       "2018-10-15T16:05:03Z"
+    },
+    {
+      "apikey":     "APIKEY from API, or other Identifier from Salesforce",
+      "amount":     100.0,
+      "date":       "2018-11-15T16:05:03Z"
+    }
+  ],
+  "debts": [
+    {
+      "apikey":       "APIKEY from API, or other Identifier from Salesforce",
+      "name":         "Student Loan",
+      "status":       "active",
+      "debt":         535.0,
+      "balance":      535.0
+    }
+  ],
+  "tasks": [
+    {
+      "task_type": "confirm_email",
+      "name": "Email verification needed",
+      "description": "Confirmation code sent to email, please confirm",
+      "task_options": {
+        "todo": "TODO",
+        "actions": [
+          "send_2fa",
+          "confirm_2fa"
+        ],
+        "confirmed_email": false,
+        "expired": false,
+        "expires": false
+      },
+      "status": "unconfirmed"
+    },
+    {
+      "task_type": "reschedule_nsf",
+      "apikey": "APIKEY",
+      "name": "NSF",
+      "description": "Draft failed, please re-schedule NSF payment",
+      "task_options": {
+        "todo": "TODO"
+      },
+      "status": "NSF"
+    },
+    {
+      "task_type": "call_needed",
+      "apikey": "APIKEY",
+      "name": "On-Boarding Call Due",
+      "description": "Please call (111) 111-1111",
+      "task_options": {
+        "phone_number": "(111) 111-1111"
+      },
+      "due_date": "2017-12-11T07:00:00Z",
+      "status": "Not Started"
+    },
+    {
+      "task_type": "call_needed",
+      "apikey": "APIKEY",
+      "name": "Year 2 - Q3 Account Review Due",
+      "description": "Please call (111) 111-1111",
+      "task_options": {
+        "phone_number": "(111) 111-1111"
+      },
+      "due_date": "2017-12-11T07:00:00Z",
+      "status": "Not Started"
+    },
+    {
+      "task_type": "call_needed",
+      "apikey": "APIKEY",
+      "name": "7 Month Strategy Call Due",
+      "description": "Please call (111) 111-1111",
+      "task_options": {
+        "phone_number": "(111) 111-1111"
+      },
+      "due_date": "2017-12-11T07:00:00Z",
+      "status": "Not Started"
+    },
+    {
+      "task_type": "offer",
+      "apikey": "OFFER_TASK_APIKEY",
+      "name": "Offer-DDDDD",
+      "description": "Click to accept, or call to decline",
+      "task_options": {
+        "phone_number": "(555) 555-5555"
+      },
+      "offer_amount": 885.6,
+      "original_balance": 2214,
+      "nds_creditor_info": "NDS Current: company name LLC<br>NDS Original: Company/SYNCB",
+      "number_of_fee_payments": 1,
+      "number_of_payments": 4,
+      "first_payment_date": "2018-06-22T00:00:00Z",
+      "last_payment_date": "2018-09-22T00:00:00Z",
+      "status": "Pending Client Approval"
+    },
+    {
+      "task_type": "poa",
+      "apikey": "APIKEY",
+      "name": "GT-DDDDDD",
+      "description": "Please sign and upload POA Form",
+      "status": "Letter Pending"
+    },
+    {
+      "task_type": "bank_change",
+      "apikey": "APIKEY",
+      "name": "Change Bank Request - Pending",
+      "description": "This should probably be shown under Notifications since no action can be made for User",
+      "status": "Completed"
+    }
+  ],
+  "notifications": [
+    {
+      "apikey":     "APIKEY from API, or other Identifier from Salesforce",
+      "name":       "Example Notification",
+      "read":       false,
+      "date":       "2018-10-15T16:05:03Z"
+    }
+  ],
+  "documents": [
+    {
+        "task_type": "bank_change",
+        "task_apikey": null,
+        "apikey": "Box file ID",
+        "name": "filename.pdf",
+        "status": "active",
+        "date_added": "2017-10-16T03:52:51Z",
+        "size": "0.23 MB",
+        "download_url": "url"
+    },
+    {
+        "task_type": "poa",
+        "task_apikey": null,
+        "apikey": "Box file ID",
+        "name": "filename.pdf",
+        "status": "active",
+        "date_added": "2017-10-16T03:52:46Z",
+        "size": "0.51 MB",
+        "download_url": "url"
+    },
+    {
+        "task_type": "add_debt",
+        "task_apikey": null,
+        "apikey": "Box file ID",
+        "name": "filename.pdf",
+        "status": "active",
+        "date_added": "2017-10-16T03:52:51Z",
+        "size": "0.03 MB",
+        "download_url": "url"
+    }
+  ],
+  "blank_forms": {
+    "bank_change": {
+      "apikey":       "Box file ID",
+      "name":         "Change Bank Info - GCS.pdf",
+      "status":       null,
+      "date_added":   "2018-06-22T21:19:14Z",
+      "size":         "0.07 MB",
+      "download_url": "url"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+> POST: <%= @root_url %>/tasks/add_funds
+
+```conf
+// Coming soon
+```
+
+```javascript
+// Coming soon
+```
+
+> Success:
+
+```yaml
+{
+  "jwt":          <%= @jwt_text %>,
+  "2fa_required": false,
+  "message":      "Additional funds request submitted"
+}
+```
+
+> Error:
+
+```yaml
+{
+  "error": "Unable to get to request adding additional funds"
+}
+```
+
+<%= partial "partials/header_tokens.md.erb", :locals => {header_types: ["jwt"]} %>
+
+- **Required fields:**
+  - amount
+      - Formats: 100.50, 100.5, 100
+  - schedule_date
+      - Format: "YYYY-MM-DD"
+
+**NOTES:**
+
+- This submits a request to add additional funds (`amount` and `schedule_date`) that company will review/process manually
+- `schedule_date` must be >= 72 hours from now (UTC time)

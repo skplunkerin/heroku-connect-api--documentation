@@ -1,0 +1,37 @@
+> POST: <%= @root_url %>/documents
+
+**WARNING:** This endpoint is for **GENERIC** document uploads only (where additional info/process isn't needed, or where a Task endpoint isn't defined for a specific file upload type).
+
+**Use these Task enpdoints for the following document types:**
+
+- **[Add Debt](#task-add-debt)**
+- **[Upload Change Bank form](#task-upload-bank-change-form)**
+- **[Upload POA form](#task-upload-poa-form)**
+
+```conf
+// Coming soon
+```
+
+```javascript
+// Coming soon
+```
+
+> Success:
+
+```yaml
+{
+  "jwt":          <%= @jwt_text %>,
+  "2fa_required": false,
+  "message":      "Thank you, your file will be processed within 1 to 2 business days"
+}
+```
+
+<%= partial "partials/header_tokens.md.erb", :locals => {header_types: ["jwt"]} %>
+
+- **Required fields:**
+  - file
+      - size must be <= 20MB
+
+**NOTES:**
+
+- `file` must be in PDF format

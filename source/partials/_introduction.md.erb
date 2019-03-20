@@ -1,0 +1,49 @@
+Welcome to the API. Each **"Application"** that needs to access this API will be setup with their own **"Company APIKEY"**. This will make the app unique for the Company-specific Users data.
+
+**The basic API flow will follow these steps:**
+
+1. **New company server**
+  - Save **Company APIKEY** in ENV variable or config file
+  - **Initialize Server**
+      - **NOTE:** `Authorization: Token token=[COMPANY_APIKEY]` required
+      - Hit [**Company initialize endpoint**](#show-initialize-site)
+      - Save results (somehow) in JSON config, or ENV variables
+      - **NOTES:**
+          - Site code will utilize this JSON config file for site appearance
+          - To refresh settings (if Company data ever changes), hit the endpoint again and replace JSON config file
+
+2. **User Sign Up**
+  - **NOTE:** `Authorization: Token token=[COMPANY_APIKEY]` required to make User API calls **before** they're logged in
+  - **1. Sign Up - Search:**
+      - Hit [**User sign up search endpoint**](#sign-up-search)
+      - On success, continue on with User Sign Up
+  - **2. Sign Up:**
+      - Hit [**User sign up endpoint**](#sign-up)
+      - On success, retrieve Users `[JWT]`
+          - **NOTE:** Verify the `[JWT]` Signature before saving, this can (**SHOULD**) only ever be done on the server, never client-side (as this will reveal the secret key used to verify/decode `[JWT]`)
+      - Save `[JWT]` for future User API requests
+
+3. **User Sign In**
+  - **NOTE:** `Authorization: Token token=[COMPANY_APIKEY]` required to make User API calls **before** they're logged in
+  - Hit [**User sign in endpoint**](#sign-in)
+  - On success, retrieve Users `[JWT]`
+      - **NOTE:** Verify the `[JWT]` Signature before saving, this can (**SHOULD**) only ever be done on the server, never client-side (as this will reveal the secret key used to verify/decode `[JWT]`)
+  - Save `[JWT]` for future User API requests
+
+4. **User API Access**
+  - **NOTE:** `Authorization: Bearer [JWT]` required to make all User API calls once they're logged in
+  - Hit necessary endpoint
+  - On success, a new User `[JWT]` will be returned with a refreshed **Expire Date/Time** (30 minutes?)
+      - **NOTE:** Verify the `[JWT]` Signature before saving, this can (**SHOULD**) only ever be done on the server, never client-side (as this will reveal the secret key used to verify/decode `[JWT]`)
+  - Save `[JWT]` for future User API requests
+  - When User inactive for X minutes, the `[JWT]` will be rejected
+      - **NOTE:** once rejected, delete saved `[JWT]` and redirect User to `/users/sign_in` page with appropriate notice
+
+<%= partial "partials/logic_callout.md.erb", :locals => {
+  header_type:  "caution", 
+  header:       "LOGIC CHECK NEEDED", 
+  points: [
+    "How will we initialize the web interface?",
+    "Will this need to be a CLI/CRON job or similar?"
+  ]
+} %>

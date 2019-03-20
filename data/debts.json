@@ -1,0 +1,20 @@
+{
+  "balance": {
+    "total_debt":       5350.2,
+    "total_balance":    4000.0
+  },
+  "debt_review": {
+    "apikey":   "APIKEY from API, or other Identifier from Salesforce",
+    "name":     "Student Loan 2",
+    "status":   "pending",
+    "debt":     3500.0,
+    "balance":  3500.0
+  },
+  "debt": {
+    "apikey":   "APIKEY from API, or other Identifier from Salesforce",
+    "name":     "Student Loan",
+    "status":   "active",
+    "debt":     350.0,
+    "balance":  350.0
+  }
+}

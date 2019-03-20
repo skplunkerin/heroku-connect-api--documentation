@@ -1,0 +1,21 @@
+> PUT: <%= @root_url %>/tasks/[TASK_TYPE]/[TASK_APIKEY]
+
+```conf
+// Coming soon
+```
+
+```javascript
+// Coming soon
+```
+
+> Success:
+
+```yaml
+<%= JSON.pretty_generate({
+  "jwt":  @jwt_text,
+}.merge(data.tasks.call_needed_onboarding)).gsub('\\"', '') %>
+```
+
+<%= partial "partials/header_tokens.md.erb", :locals => {header_types: ["jwt"]} %>
+
+**This endpoint is coming soon.**

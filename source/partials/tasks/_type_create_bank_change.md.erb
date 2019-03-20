@@ -1,0 +1,44 @@
+> POST: <%= @root_url %>/tasks/bank_change
+
+```conf
+// Coming soon
+```
+
+```javascript
+// Coming soon
+```
+
+> Success:
+
+```yaml
+{
+  "jwt":          <%= @jwt_text %>,
+  "2fa_required": false,
+  "message":      "Bank Change form uploaded successfully",
+  "document": {
+    "apikey":       "Box file ID",
+    "name":         "filename.pdf",
+    "status":       "active",
+    "date_added":   "2017-10-16T03:52:51Z",
+    "size":         "0.03 MB",
+    "download_url": "url"
+  }
+}
+```
+
+> Error:
+
+```yaml
+{
+  "error": "File name already used, please upload with new file name"
+}
+```
+
+<%= partial "partials/header_tokens.md.erb", :locals => {header_types: ["jwt"]} %>
+
+- **Required fields:**
+  - file
+
+**NOTES:**
+
+- `file` must be a signed Change Bank form for the Users given Bank Processor (CFT or GCS). To get the correct blank form, use the `bank_change` form found in the User object `blank_forms` section.

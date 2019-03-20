@@ -1,0 +1,29 @@
+> POST: <%= @root_url %>/debts
+
+```conf
+// Coming soon
+```
+
+```javascript
+// Coming soon
+```
+
+> Success:
+
+```yaml
+<%= JSON.pretty_generate({
+  "jwt":  @jwt_text
+}.merge(data.debts.debt_review)).gsub('\\"', '') %>
+```
+
+<%= partial "partials/header_tokens.md.erb", :locals => {header_types: ["jwt"]} %>
+
+<%= partial "partials/logic_callout.md.erb", :locals => {
+  header_type:  "caution", 
+  header:       "CONFIRMATION NEEDED", 
+  points: [
+    "Need to confirm JSON response keys/values and formats"
+  ]
+} %>
+
+**This endpoint is coming soon.**

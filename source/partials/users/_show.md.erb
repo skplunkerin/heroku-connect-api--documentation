@@ -1,0 +1,38 @@
+> GET: <%= @root_url %>/users/[USER_APIKEY]
+
+```conf
+// Coming soon
+```
+
+```javascript
+// Coming soon
+```
+
+> Success:
+
+```yaml
+<%= JSON.pretty_generate({
+  "jwt":            @jwt_text,
+  "2fa_required":   true,
+}.merge(data.users)).gsub('\\"', '') %>
+```
+
+<%= partial "partials/header_tokens.md.erb", :locals => {header_types: ["jwt"]} %>
+
+<%= partial "partials/logic_callout.md.erb", :locals => {
+  header_type:  "caution", 
+  header:       "CONFIRMATION NEEDED", 
+  points: [
+    "Need to confirm JSON response keys/values and formats"
+  ]
+} %>
+
+**This endpoint is coming soon.**
+
+**NOTES:**
+
+- To get the User APIKEY, save that info when the User successfully logs in
+- We will only return data for the current user logged in
+- We will not return "password", the interface will need add mock data.
+- `tasks` will be empty [] array if no actions
+- `notifications` will be empty [] array if no notifications

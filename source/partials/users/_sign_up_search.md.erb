@@ -1,0 +1,58 @@
+> POST: <%= @root_url %>/users/sign_up_search
+
+```conf
+// Coming soon
+```
+
+```javascript
+// Coming soon
+```
+
+> Success - Found:
+
+```yaml
+{
+  "message":  "Client information found",
+  "user": {
+    "email": "t**t@e******.com",  # test@example.com
+    "phone": "********11"         # 1111111111
+  }
+}
+```
+
+> Error - Unable to find info:
+
+```yaml
+{
+  "error": "We were unable to locate your account with the given information. Please check your information and contact us if you have further issues. We can be reached at <a href=\"tel:(555) 555-5555\">(555) 555-5555</a> or <a href=\"mailto:cs@example.com\">cs@example.com</a>",
+  "error_phone": "(555) 555-5555",
+  "error_email": "cs@example.com"
+}
+```
+
+> Error - User exists, sign in required:
+
+```yaml
+{
+  "error": "This program number already has an associated account. Please login using your email address. If you have additional issues, contact us at <a href=\"tel:(555) 555-5555\">(555) 555-5555</a> or <a href=\"mailto:cs@example.com\">cs@example.com</a>",
+  "error_phone": "(555) 555-5555",
+  "error_email": "cs@example.com",
+  "user": {
+    "email": "e*****e@e******.com",
+    "phone": "******5555"
+  }
+}
+```
+
+<%= partial "partials/header_tokens.md.erb", :locals => {header_types: ["apikey"]} %>
+
+- **Required fields:**
+  - customer_number
+  - dob
+  - ssn_last_4
+
+**NOTES:**
+
+- Use this endpoint first to verify the User's info can be found before we ask them to continue [Sign Up](#sign-up)
+  - You'll get a masked version of their `email`/`phone` (if found, else NULL) to use in the interface
+      - If you receive NULL, prompt the User for their information during [Sign Up](#sign-up)

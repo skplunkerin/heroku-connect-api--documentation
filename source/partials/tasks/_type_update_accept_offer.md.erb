@@ -1,0 +1,31 @@
+> GET: <%= @root_url %>/tasks/offers/[OFFER_APIKEY]/accept
+
+```conf
+// Coming soon
+```
+
+```javascript
+// Coming soon
+```
+
+> Success:
+
+```yaml
+{
+  "jwt":          <%= @jwt_text %>,
+  "2fa_required": false,
+  "message":      "Offer accepted"
+}
+```
+
+> Error
+
+```yaml
+{
+  "error": "Unable to accept offer, please try again or contact us if you're having issues. We can be reached at <a href=\"tel:(555) 555-5555\">(555) 555-5555</a> or <a href=\"mailto:cs@example.com\">cs@example.com</a>",
+  "error_phone": "(555) 555-5555",
+  "error_email": "cs@example.com"
+}
+```
+
+<%= partial "partials/header_tokens.md.erb", :locals => {header_types: ["jwt"]} %>

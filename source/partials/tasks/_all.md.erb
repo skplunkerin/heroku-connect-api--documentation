@@ -1,0 +1,41 @@
+> GET: <%= @root_url %>/tasks
+
+```conf
+// Coming soon
+```
+
+```javascript
+// Coming soon
+```
+
+> Success:
+
+```yaml
+<%= JSON.pretty_generate({
+  "jwt":  @jwt_text,
+  "tasks": [
+    data.tasks.confirm_email,
+    data.tasks.reschedule_nsf,
+    data.tasks.call_needed_onboarding,
+    data.tasks.call_needed_review,
+    data.tasks.call_needed_strategy,
+    data.tasks.offer,
+    data.tasks.poa,
+    data.tasks.bank_change,
+    {}
+  ]
+}).gsub('\\"', '') %>
+```
+
+<%= partial "partials/header_tokens.md.erb", :locals => {header_types: ["jwt"]} %>
+
+- **Task Types:**
+  - `confirm_email`
+  - `reschedule_nsf`
+  - `reschedule_upcoming_draft`
+  - `call_needed`
+  - `offer`
+  - `poa`
+  - `bank_change`
+  - `add_funds`
+  - `add_debt`

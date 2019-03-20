@@ -1,0 +1,66 @@
+> POST: <%= @root_url %>/users/send_2fa
+
+```conf
+// Coming soon
+```
+
+```javascript
+// Coming soon
+```
+
+> Success - Send/re-send 2FA code:
+
+```yaml
+{
+  "2fa_required":       true,
+  "message":            "Code created",
+  "code_sent_message":  "Text message sent to ******5555"
+}
+```
+
+> Success - Reset password confirmation:
+
+```yaml
+{
+  "2fa_required":       false,
+  "message":            "Reset key created",
+  "code_sent_message":  "Text message sent to ******5555"
+}
+```
+
+> Error
+
+```yaml
+{
+  "error": "Unable to find user with given information, please try again or contact a representative to confirm your information is correct"
+}
+```
+
+<%= partial "partials/header_tokens.md.erb", :locals => {header_types: ["apikey"]} %>
+
+<%= partial "partials/logic_callout.md.erb", :locals => {
+  header_type:  "caution", 
+  header:       "LOGIC CHECK NEEDED", 
+  points: [
+    "Should we combine this with forgot_password endpoint?"
+  ]
+} %>
+
+- **Required fields:**
+  - code_type
+      - Valid Options: `required_auth_code`, `auth_code`, `forgot_password`
+  - **ONE OF THESE:**
+      - find_by_apikey - _used to "send/re-send auth code to preferred contact method (unless contact_method is specified)_
+      - find_by_email - _find account and send forgot password code via preferred contact method (unless contact_method is specified)_
+      - find_by_phone - _find account and send forgot password code via preferred contact method (unless contact_method is specified)_
+- **Optional fields:**
+  - contact_method - _if this is not defined, API will use their 2FA contact preference_
+      - Valid Options: `sms`, `email`, `call`
+
+**NOTES:**
+
+- To get the User APIKEY, save that info when the User successfully logs in or from other endpoints
+- `code_type` will determine if 2FA code is required or not (i.e. for non-required Email confirm), or if password reset key is needed
+- `contact_method` will determine how the code is sent to User
+  - **NOTE:** for 2FA codes, the method specified here will determine how the code is set in the API (in addition to how the code is sent).<br/>
+    _i.e. if current required 2FA is on SMS, but `contact_method` is set to Email (and `code_type` set to **required_auth_code**) then the new required 2FA will now be on Email instead of SMS._

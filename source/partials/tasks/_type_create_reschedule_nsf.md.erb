@@ -1,0 +1,37 @@
+> POST: <%= @root_url %>/tasks/reschedule_nsf
+
+```conf
+// Coming soon
+```
+
+```javascript
+// Coming soon
+```
+
+> Success:
+
+```yaml
+{
+  "jwt":          <%= @jwt_text %>,
+  "2fa_required": false,
+  "message":      "Makeup payment added successfully"
+}
+```
+
+> Error:
+
+```yaml
+{
+  "error": "Unable to get failed payment for non-NSF Program"
+}
+```
+
+<%= partial "partials/header_tokens.md.erb", :locals => {header_types: ["jwt"]} %>
+
+- **Required fields:**
+  - schedule_date
+      - Format: "YYYY-MM-DD"
+
+**NOTES:**
+
+- `schedule_date` must be >= 72 hours from now (UTC time)

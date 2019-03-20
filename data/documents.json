@@ -1,0 +1,34 @@
+{
+  "list": [
+    {
+        "task_type": "bank_change",
+        "task_apikey": null,
+        "apikey": "Box file ID",
+        "name": "filename.pdf",
+        "status": "active",
+        "date_added": "2017-10-16T03:52:51Z",
+        "size": "0.23 MB",
+        "download_url": "url"
+    },
+    {
+        "task_type": "poa",
+        "task_apikey": null,
+        "apikey": "Box file ID",
+        "name": "filename.pdf",
+        "status": "active",
+        "date_added": "2017-10-16T03:52:46Z",
+        "size": "0.51 MB",
+        "download_url": "url"
+    },
+    {
+        "task_type": "add_debt",
+        "task_apikey": null,
+        "apikey": "Box file ID",
+        "name": "filename.pdf",
+        "status": "active",
+        "date_added": "2017-10-16T03:52:51Z",
+        "size": "0.03 MB",
+        "download_url": "url"
+    }
+  ]
+}

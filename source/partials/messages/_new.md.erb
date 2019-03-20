@@ -1,0 +1,43 @@
+> POST: <%= @root_url %>/messages
+
+```conf
+// Coming soon
+```
+
+```javascript
+// Coming soon
+```
+
+> Success:
+
+```yaml
+{
+  "jwt":            <%= @jwt_text %>,
+  "2fa_required":   true,
+  "message":        "Thank you, support request received. A copy of your form details has been sent to your personal email."
+}
+```
+
+<%= partial "partials/header_tokens.md.erb", :locals => {header_types: ["jwt"]} %>
+
+<%= partial "partials/logic_callout.md.erb", :locals => {
+  header_type:  "caution", 
+  header:       "LOGIC CHECK NEEDED", 
+  points: [
+    "Need to confirm how we send the form to the right Company 'CS email'",
+    "Need to confirm JSON response keys/values and formats"
+  ]
+} %>
+
+- **Required Fields**
+  - message_type
+      - Valid Options: `other`, `ask_question`, `assistance_needed`, `provide_feedback`
+  - subject
+  - contact_preference
+      - Valid Options: `phone`, `email`
+  - message
+
+**NOTES:**
+
+- On form submit, details are forwarded to company
+  - Then the form details are forwarded to the User's email

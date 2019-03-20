@@ -1,0 +1,44 @@
+> POST: <%= @root_url %>/tasks/poa
+
+```conf
+// Coming soon
+```
+
+```javascript
+// Coming soon
+```
+
+> Success:
+
+```yaml
+{
+  "jwt":          <%= @jwt_text %>,
+  "2fa_required": false,
+  "message":      "POA form uploaded successfully",
+  "document": {
+    "apikey":       "Box file ID",
+    "name":         "filename.pdf",
+    "status":       "active",
+    "date_added":   "2017-10-16T03:52:51Z",
+    "size":         "0.03 MB",
+    "download_url": "url"
+  }
+}
+```
+
+> Error:
+
+```yaml
+{
+  "error": "File name already used, please upload with new file name"
+}
+```
+
+<%= partial "partials/header_tokens.md.erb", :locals => {header_types: ["jwt"]} %>
+
+- **Required fields:**
+  - file
+
+**NOTES:**
+
+- `file` must be a signed Power of Attorney form. To get the correct form, company will need to send this via letter or email.

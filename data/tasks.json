@@ -1,0 +1,92 @@
+{
+  "confirm_email": {
+    "task_type": "confirm_email",
+    "name": "Email verification needed",
+    "description": "Confirmation code sent to email, please confirm",
+    "task_options": {
+      "todo": "TODO",
+      "actions": [
+        "send_2fa",
+        "confirm_2fa"
+      ],
+      "confirmed_email": false,
+      "expired": false,
+      "expires": false
+    },
+    "status": "unconfirmed"
+  },
+  "reschedule_nsf": {
+    "task_type": "reschedule_nsf",
+    "apikey": "APIKEY",
+    "name": "NSF",
+    "description": "Draft failed, please re-schedule NSF payment",
+    "task_options": {
+      "todo": "TODO"
+    },
+    "status": "NSF"
+  },
+  "call_needed_onboarding": {
+    "task_type": "call_needed",
+    "apikey": "APIKEY",
+    "name": "On-Boarding Call Due",
+    "description": "Please call (111) 111-1111",
+    "task_options": {
+      "phone_number": "(111) 111-1111"
+    },
+    "due_date": "2017-12-11T07:00:00Z",
+    "status": "Not Started"
+  },
+  "call_needed_review": {
+    "task_type": "call_needed",
+    "apikey": "APIKEY",
+    "name": "Year 2 - Q3 Account Review Due",
+    "description": "Please call (111) 111-1111",
+    "task_options": {
+      "phone_number": "(111) 111-1111"
+    },
+    "due_date": "2017-12-11T07:00:00Z",
+    "status": "Not Started"
+  },
+  "call_needed_strategy": {
+    "task_type": "call_needed",
+    "apikey": "APIKEY",
+    "name": "7 Month Strategy Call Due",
+    "description": "Please call (111) 111-1111",
+    "task_options": {
+      "phone_number": "(111) 111-1111"
+    },
+    "due_date": "2017-12-11T07:00:00Z",
+    "status": "Not Started"
+  },
+  "offer": {
+    "task_type": "offer",
+    "apikey": "OFFER_TASK_APIKEY",
+    "name": "Offer-DDDDD",
+    "description": "Click to accept, or call to decline",
+    "task_options": {
+      "phone_number": "(555) 555-5555"
+    },
+    "offer_amount": 885.6,
+    "original_balance": 2214,
+    "nds_creditor_info": "NDS Current: company name LLC<br>NDS Original: Company/SYNCB",
+    "number_of_fee_payments": 1,
+    "number_of_payments": 4,
+    "first_payment_date": "2018-06-22T00:00:00Z",
+    "last_payment_date": "2018-09-22T00:00:00Z",
+    "status": "Pending Client Approval"
+  },
+  "poa": {
+    "task_type": "poa",
+    "apikey": "APIKEY",
+    "name": "GT-DDDDDD",
+    "description": "Please sign and upload POA Form",
+    "status": "Letter Pending"
+  },
+  "bank_change": {
+    "task_type": "bank_change",
+    "apikey": "APIKEY",
+    "name": "Change Bank Request - Pending",
+    "description": "This should probably be shown under Notifications since no action can be made for User",
+    "status": "Completed"
+  }
+}

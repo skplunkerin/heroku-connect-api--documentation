@@ -1,0 +1,24 @@
+> Make sure to replace `[COMPANY_APIKEY]` with the actual Company APIKEY.
+
+All requests (unless otherwise specified) will use APIKEY's and JWT tokens to grant/deny access to the API. Contact [<%= @root_contact %>](mailto:<%= @root_contact %>) to request the correct Company APIKEY.
+
+_**NOTE:** Once `[COMPANY_APIKEY]` received, keep this info private as it cannot be changed easily_
+
+Authentication headers should look like the following:
+
+**Initial login (before Users successful authentication):**
+
+- `Authorization: Token token=[COMPANY_APIKEY]`
+
+**After User successfully authenticates:**
+
+- `Authorization: Bearer [JWT]`
+
+<aside class="notice">
+  <b>NOTE:</b>
+  <ul>
+    <li>You must replace <code>[APIKEY]</code> with your Company APIKEY.</li>
+    <li>Once authenticated, your <code>[APIKEY]</code> will be included in the <code>[JWT]</code>.</li>
+    <li>Once you receive the <code>[JWT]</code>, each corresponding request that requires this will return a new <code>[JWT]</code> that you'll want to use, as the expire time is reset with each new code received.</li>
+  </ul>
+</aside>

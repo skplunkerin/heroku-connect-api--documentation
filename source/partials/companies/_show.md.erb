@@ -1,0 +1,59 @@
+> GET: <%= @root_url %>/companies/[COMPANY_APIKEY]
+
+```conf
+// Coming soon
+```
+
+```javascript
+// Coming soon
+```
+
+> Success:
+
+```yaml
+{
+  "apikey":           <%= @apikey_text %>,
+  "name":             "Company name",
+  "footer_name":      "Company Footer Name",
+  "website":          "https://dashboard.company.com",
+  "website_title":    "Client Portal | Company",
+  "phone_number":     "etc...",
+  "email":            "etc...",
+  "complaint_email":  "etc...",
+  "fax_number":       "etc...",
+  "address":          "etc...",
+  "social_networks": {
+    "facebook":       "https://facebook.com",
+    "google_plus":    "https://plus.google.com",
+    "linked_in":      "https://linkedin.com",
+    "twitter":        "https://twitter.com"
+  },
+  "image_paths": {
+    "logo":       "/path/to/logo.png",
+    "favicon":    "/path/to/favicon.ico"
+  },
+  "color_schema": {
+    "primary":      "#33425A",
+    "footer":       "etc...",
+    "button":       "etc..."
+  },
+  "active":         true,
+  "test_mode":      true,
+  "test_email":     "etc...",
+  "test_phone":     "etc...",
+  "account_record_type": "etc..."
+}
+```
+
+<%= partial "partials/header_tokens.md.erb", :locals => {header_types: ["apikey"]} %>
+
+<%= partial "partials/logic_callout.md.erb", :locals => {
+  header_type:  "caution", 
+  header:       "LOGIC CHECK NEEDED", 
+  points: [
+    "Will company ever be inactive? If so, how should we handle?",
+    "Need to confirm JSON response keys/values and formats"
+  ]
+} %>
+
+**This endpoint is coming soon.**

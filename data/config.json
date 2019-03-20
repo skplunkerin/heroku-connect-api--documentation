@@ -1,0 +1,7 @@
+{
+  //"root_url":         "https://salesforce-api.herokuapp.com/api/v1",
+  "root_url":         "https://api.example.com/api/v1",
+  "root_contact":     "admin@example.com", // NOTE: see above toc_footers where this value is statically set
+  "jwt_text":         "NEW/UPDATED USER JWT",
+  "apikey_text":      "APIKEY from API, or other Identifier from Salesforce"
+}

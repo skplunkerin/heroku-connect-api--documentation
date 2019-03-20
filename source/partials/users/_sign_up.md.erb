@@ -1,0 +1,63 @@
+> POST: <%= @root_url %>/users/sign_up
+
+```conf
+// Coming soon
+```
+
+```javascript
+// Coming soon
+```
+
+> Success:
+
+```yaml
+{
+  "jwt":                <%= @jwt_text %>,
+  "apikey":             <%= @apikey_text %>,
+  "2fa_required":       true,
+  "message":            "User created, 2FA is required",
+  "code_sent_message":  "Text message sent to ******5555"
+}
+```
+
+> Error - Unable to find info:
+
+```yaml
+{
+  "error": "We were unable to locate your account with the given information. Please check your information and contact us if you have further issues. We can be reached at <a href=\"tel:(555) 555-5555\">(555) 555-5555</a> or <a href=\"mailto:cs@example.com\">cs@example.com</a>",
+  "error_phone": "(555) 555-5555",
+  "error_email": "cs@example.com"
+}
+```
+
+> Error - User exists, sign in required:
+
+```yaml
+{
+  "error": "This program number already has an associated account. Please login using your email address. If you have additional issues, contact us at <a href=\"tel:(555) 555-5555\">(555) 555-5555</a> or <a href=\"mailto:cs@example.com\">cs@example.com</a>",
+  "error_phone": "(555) 555-5555",
+  "error_email": "cs@example.com",
+  "user": {
+    "email": "e*****e@e******.com",
+    "phone": "******5555"
+  }
+}
+```
+
+<%= partial "partials/header_tokens.md.erb", :locals => {header_types: ["apikey"]} %>
+
+- **Required fields:**
+  - customer_number
+  - dob
+  - ssn_last_4
+  - password
+  - password_confirmation
+  - contact_2fa_preference
+      - Valid Options: `sms`, `email`, `call`
+- **Required if [Sign up search](#sign-up-search) returns NULL:**
+  - email
+  - phone
+
+**NOTES:**
+
+- You need to hit [Sign up search](#sign-up-search) endpoint first to see if `email` or `phone` is required.

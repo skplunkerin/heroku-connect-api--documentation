@@ -1,0 +1,9 @@
+<%= partial "partials/logic_callout.md.erb", :locals => {
+  header_type:  "caution", 
+  header:       "TBD", 
+  points: []
+} %>
+
+If we need a way to make sure emails / SMS aren't sent to an actual User when interacting with the API, we'll need a way to set if the Company is in **"test mode"**, or if a given request is a test request.
+
+To mark a request as a test, playing with the idea of appending `.test` to the URL of the endpoint. This will make the call use the Company's `test_email` & `test_phone`, or not send email/SMS if these aren't set.

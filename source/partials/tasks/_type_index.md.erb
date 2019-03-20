@@ -1,0 +1,45 @@
+> GET: <%= @root_url %>/tasks/[TASK_TYPE]
+
+```conf
+// Coming soon
+```
+
+```javascript
+// Coming soon
+```
+
+> Success - call_needed Task Type:
+
+```yaml
+<%= JSON.pretty_generate({
+  "jwt":  @jwt_text,
+  "tasks": [
+    data.tasks.call_needed_onboarding,
+    data.tasks.call_needed_review,
+    data.tasks.call_needed_strategy
+  ]
+}).gsub('\\"', '') %>
+```
+
+<%= partial "partials/header_tokens.md.erb", :locals => {header_types: ["jwt"]} %>
+
+<%= partial "partials/logic_callout.md.erb", :locals => {
+  header_type:  "caution", 
+  header:       "CONFIRMATION NEEDED", 
+  points: [
+    "Chris needs to work with company on determining what 'Group Tasks & Tasks' we return/use for Users"
+  ]
+} %>
+
+- **Task Types:**
+  - `confirm_email`
+  - `reschedule_nsf`
+  - `reschedule_upcoming_draft`
+  - `call_needed`
+  - `offer`
+  - `poa`
+  - `bank_change`
+  - `add_funds`
+  - `add_debt`
+
+**This endpoint is coming soon.**

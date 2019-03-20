@@ -1,0 +1,54 @@
+> POST: <%= @root_url %>/users/sign_in
+
+```conf
+// Coming soon
+```
+
+```javascript
+// Coming soon
+```
+
+> Success:
+
+```yaml
+<%= JSON.pretty_generate({
+  "jwt":            @jwt_text,
+  "2fa_required":   false,
+  "user":           data.users
+}).gsub('\\"', '') %>
+```
+
+> If 2FA Required:
+
+```yaml
+{
+  "2fa_required": true,
+  "error":        "2FA code required, please resend with auth code",
+  "code_sent_message":  "Text message sent to ******5555"
+}
+```
+
+<%= partial "partials/header_tokens.md.erb", :locals => {header_types: ["apikey"]} %>
+
+<%= partial "partials/logic_callout.md.erb", :locals => {
+  header_type:  "caution", 
+  header:       "CONFIRMATION NEEDED", 
+  points: [
+    "Need to confirm JSON response keys/values and formats"
+  ]
+} %>
+
+- **Required fields:**
+  - **1st attempt (non-2FA):**
+      - email
+      - password
+  - **2nd attempt (2FA):**
+      - email
+      - password
+      - login_code
+
+**This endpoint is coming soon.**
+
+**NOTES:**
+
+- The **2nd 2FA attempt** is needed if the 1st attempt prompts the User with a `"2fa_required": true` response.

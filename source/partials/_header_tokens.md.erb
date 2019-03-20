@@ -1,0 +1,12 @@
+<aside class="notice">
+  <b>Authorization Header:</b>
+  <ul class="notice__list">
+    <% header_types.each do |key| %>
+      <% if key == "jwt" %>
+        <li><code>Authorization: Bearer [JWT]</code></li>
+      <% elsif key == "apikey" %>
+        <li><code>Authorization: Token token=[COMPANY_APIKEY]</code></li>
+      <% end %>
+    <% end %>
+  </ul>
+</aside>

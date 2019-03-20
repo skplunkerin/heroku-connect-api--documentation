@@ -1,0 +1,11 @@
+<%
+classes = (defined?(header_type)) ? ( (header_type == 'caution') ? 'warning caution' : header_type ) : 'warning'
+%>
+<aside class="<%= classes %> ">
+  <b><%= header %>:</b>
+  <ul class="notice__list">
+    <% points.each do |value| %>
+      <li><%= value %></li>
+    <% end %>
+  </ul>
+</aside>

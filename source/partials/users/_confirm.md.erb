@@ -1,0 +1,57 @@
+> POST: <%= @root_url %>/users/confirm_2fa
+
+```conf
+// Coming soon
+```
+
+```javascript
+// Coming soon
+```
+
+> Success - Using Company APIKEY authentication:
+
+```yaml
+{
+  "message":    "Code confirmed, please login"
+}
+```
+
+> Success - Using User `jwt` authentication:
+
+```yaml
+{
+  "jwt":          <%= @jwt_text %>,
+  "apikey":       <%= @apikey_text %>,
+  "2fa_required": false,
+  "message":      "Code confirmed"
+}
+```
+
+> Error:
+
+```yaml
+{
+  "error": "Code is invalid or expired."
+}
+```
+
+<%= partial "partials/header_tokens.md.erb", :locals => {header_types: ["apikey"]} %>
+
+**OR**
+
+<%= partial "partials/header_tokens.md.erb", :locals => {header_types: ["jwt"]} %>
+
+<%= partial "partials/logic_callout.md.erb", :locals => {
+  header_type:  "caution", 
+  header:       "LOGIC CHECK NEEDED", 
+  points: [
+    "If User entered wrong info, or don't see the email/text how should we re-send the confirmation if needed?"
+  ]
+} %>
+
+- **Required fields:**
+  - auth_code
+
+**NOTES:**
+
+- This endpoint can be used to confirm initial phone/email on sign_up 2FA, regular 2FA, as well as when the email needs to be confirmed (if chosen sign_up contact_preference was phone sms or call, we'll need to send email confirmation)

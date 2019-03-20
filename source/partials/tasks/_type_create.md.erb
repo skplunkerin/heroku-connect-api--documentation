@@ -1,0 +1,29 @@
+> POST: <%= @root_url %>/tasks/[TASK_TYPE]
+
+```conf
+// Coming soon
+```
+
+```javascript
+// Coming soon
+```
+
+> Success:
+
+```yaml
+{
+  "todo": "TODO"
+}
+```
+
+<%= partial "partials/header_tokens.md.erb", :locals => {header_types: ["jwt"]} %>
+
+<%= partial "partials/logic_callout.md.erb", :locals => {
+  header_type:  "caution", 
+  header:       "CONFIRMATION NEEDED", 
+  points: [
+    "Chris needs to work with company on determining what 'Group Tasks & Tasks' we will CRUD for Users"
+  ]
+} %>
+
+**This endpoint is coming soon.**

@@ -1,0 +1,51 @@
+---
+title: API Reference
+
+language_tabs:
+  - conf: Default
+  - javascript: JavaScript
+
+toc_footers:
+  - <a href='mailto:admin@example.com'>Contact for a Company APIKEY</a>
+  - <a href='https://skplunkerin.github.io/heroku-connect-api--documentation/'>Documentation Powered by GH Pages</a>
+
+includes:
+  - errors
+
+search: true
+---
+<%
+# Set global variables from config data
+@root_url = data.config.root_url
+@root_contact = data.config.root_contact
+# Need to set these this way so JSON outputs correctly as string
+@jwt_text = '"' + data.config.jwt_text + '"'
+@apikey_text = '"' + data.config.apikey_text + '"'
+%>
+
+# Introduction
+<%= partial "partials/introduction.md.erb" %>
+
+# Testing
+<%= partial "partials/testing.md.erb" %>
+
+# Authentication
+<%= partial "partials/auth.md.erb" %>
+
+# Companies
+<%= partial "partials/companies/index.md.erb" %>
+
+# Users
+<%= partial "partials/users/index.md.erb" %>
+
+# Tasks
+<%= partial "partials/tasks/index.md.erb" %>
+
+# Debts
+<%= partial "partials/debts/index.md.erb" %>
+
+# Documents
+<%= partial "partials/documents/index.md.erb" %>
+
+# Support Messages
+<%= partial "partials/messages/index.md.erb" %>

@@ -1,0 +1,45 @@
+> POST: <%= @root_url %>/tasks/reschedule_upcoming_draft
+
+```conf
+// Coming soon
+```
+
+```javascript
+// Coming soon
+```
+
+> Success:
+
+```yaml
+{
+  "jwt":          <%= @jwt_text %>,
+  "2fa_required": false,
+  "message":      "Draft successfully rescheduled"
+}
+```
+
+> Error - Draft date is within 72 hours:
+
+```yaml
+{
+  "error": "Unable to reschedule draft, please contact support"
+}
+```
+
+> Error - Schedule Date is past the following draft date:
+
+```yaml
+{
+  "error": "Schedule date must be less than July 30, 2018"
+}
+```
+
+<%= partial "partials/header_tokens.md.erb", :locals => {header_types: ["jwt"]} %>
+
+- **Required fields:**
+  - schedule_date
+      - Format: "YYYY-MM-DD"
+
+**NOTES:**
+
+- `schedule_date` must be >= 72 hours from now (UTC time), and < the following draft date

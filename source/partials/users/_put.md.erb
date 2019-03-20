@@ -1,0 +1,61 @@
+> PUT: <%= @root_url %>/users/[USER_APIKEY]
+
+```conf
+// Coming soon
+```
+
+```javascript
+// Coming soon
+```
+
+> Success:
+
+```yaml
+<%= JSON.pretty_generate({
+  "jwt":                @jwt_text,
+  "2fa_required":       false,
+  "message":            "User updated successfully, Re-confirmation needed for email",
+  "code_sent_message":  "Email sent to t**t@e******.com",
+  "user":               data.users
+}).gsub('\\"', '') %>
+```
+
+> Error:
+
+```yaml
+{
+  "2fa_required": 'sms',
+  "error": "2FA code required, please resend with auth code",
+  "code_sent_message":  "Text message sent to ******5555"
+}
+```
+
+> Error - Incorrect 2FA code:
+
+```yaml
+{
+  "error": "2FA code is invalid"
+}
+```
+
+<%= partial "partials/header_tokens.md.erb", :locals => {header_types: ["jwt"]} %>
+
+- **Required Fields**
+  - auth_code
+  - password - _if `new_password` is set_
+  - new_password_confirmation - _if `new_password` is set_
+- **Optional fields:**
+  - email
+  - phone
+  - contact_2fa_preference
+  - new_password
+
+**This endpoint is coming soon.**
+
+**NOTES:**
+
+- You'll need to hit this endpoint twice:
+  - 1st time (you won't have 2FA `auth_code` yet) will reject the request and create/send the 2FA to the User
+  - 2nd attempt you'll resend with the `auth_code`
+- If `contact_2fa_preference` changes to an unconfirmed `email`/`phone`, or if `email`/`phone` are updated to a new value and are needed for `contact_2fa_preference`
+  - 2FA will be required after the successful update to confirm new `email`/`phone` or `contact_2fa_preference`
