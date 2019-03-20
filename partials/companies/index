@@ -1,0 +1,63 @@
+<h2 id='show-initialize-site'>Show - Initialize Site</h2>
+<blockquote>
+<p>GET: /companies/[COMPANY_APIKEY]</p>
+</blockquote>
+
+<pre class="highlight conf tab-conf"><code>// <span class="n">Coming</span> <span class="n">soon</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// Coming soon</span>
+</code></pre>
+
+<blockquote>
+<p>Success:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span>           <span class="pi">,</span>
+  <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span>             <span class="s2">"</span><span class="s">Company</span><span class="nv"> </span><span class="s">name"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">footer_name"</span><span class="pi">:</span>      <span class="s2">"</span><span class="s">Company</span><span class="nv"> </span><span class="s">Footer</span><span class="nv"> </span><span class="s">Name"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">website"</span><span class="pi">:</span>          <span class="s2">"</span><span class="s">https://dashboard.company.com"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">website_title"</span><span class="pi">:</span>    <span class="s2">"</span><span class="s">Client</span><span class="nv"> </span><span class="s">Portal</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">Company"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">phone_number"</span><span class="pi">:</span>     <span class="s2">"</span><span class="s">etc..."</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">email"</span><span class="pi">:</span>            <span class="s2">"</span><span class="s">etc..."</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">complaint_email"</span><span class="pi">:</span>  <span class="s2">"</span><span class="s">etc..."</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">fax_number"</span><span class="pi">:</span>       <span class="s2">"</span><span class="s">etc..."</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">address"</span><span class="pi">:</span>          <span class="s2">"</span><span class="s">etc..."</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">social_networks"</span><span class="pi">:</span> <span class="pi">{</span>
+    <span class="s2">"</span><span class="s">facebook"</span><span class="pi">:</span>       <span class="s2">"</span><span class="s">https://facebook.com"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">google_plus"</span><span class="pi">:</span>    <span class="s2">"</span><span class="s">https://plus.google.com"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">linked_in"</span><span class="pi">:</span>      <span class="s2">"</span><span class="s">https://linkedin.com"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">twitter"</span><span class="pi">:</span>        <span class="s2">"</span><span class="s">https://twitter.com"</span>
+  <span class="pi">},</span>
+  <span class="s2">"</span><span class="s">image_paths"</span><span class="pi">:</span> <span class="pi">{</span>
+    <span class="s2">"</span><span class="s">logo"</span><span class="pi">:</span>       <span class="s2">"</span><span class="s">/path/to/logo.png"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">favicon"</span><span class="pi">:</span>    <span class="s2">"</span><span class="s">/path/to/favicon.ico"</span>
+  <span class="pi">},</span>
+  <span class="s2">"</span><span class="s">color_schema"</span><span class="pi">:</span> <span class="pi">{</span>
+    <span class="s2">"</span><span class="s">primary"</span><span class="pi">:</span>      <span class="s2">"</span><span class="s">#33425A"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">footer"</span><span class="pi">:</span>       <span class="s2">"</span><span class="s">etc..."</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">button"</span><span class="pi">:</span>       <span class="s2">"</span><span class="s">etc..."</span>
+  <span class="pi">},</span>
+  <span class="s2">"</span><span class="s">active"</span><span class="pi">:</span>         <span class="nv">true</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">test_mode"</span><span class="pi">:</span>      <span class="nv">true</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">test_email"</span><span class="pi">:</span>     <span class="s2">"</span><span class="s">etc..."</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">test_phone"</span><span class="pi">:</span>     <span class="s2">"</span><span class="s">etc..."</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">account_record_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">etc..."</span>
+<span class="pi">}</span>
+</code></pre>
+
+<aside class="notice">
+  <b>Authorization Header:</b>
+  <ul class="notice__list">
+        <li><code>Authorization: Token token=[COMPANY_APIKEY]</code></li>
+  </ul>
+</aside>
+
+<aside class="warning caution ">
+  <b>LOGIC CHECK NEEDED:</b>
+  <ul class="notice__list">
+      <li>Will company ever be inactive? If so, how should we handle?</li>
+      <li>Need to confirm JSON response keys/values and formats</li>
+  </ul>
+</aside>
+
+<p><strong>This endpoint is coming soon.</strong></p>

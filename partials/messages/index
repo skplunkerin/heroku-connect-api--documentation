@@ -1,0 +1,63 @@
+<h2 id='new-request-email'>New Request (Email)</h2>
+<blockquote>
+<p>POST: /messages</p>
+</blockquote>
+
+<pre class="highlight conf tab-conf"><code>// <span class="n">Coming</span> <span class="n">soon</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// Coming soon</span>
+</code></pre>
+
+<blockquote>
+<p>Success:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">jwt"</span><span class="pi">:</span>            <span class="pi">,</span>
+  <span class="s2">"</span><span class="s">2fa_required"</span><span class="pi">:</span>   <span class="nv">true</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">message"</span><span class="pi">:</span>        <span class="s2">"</span><span class="s">Thank</span><span class="nv"> </span><span class="s">you,</span><span class="nv"> </span><span class="s">support</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">received.</span><span class="nv"> </span><span class="s">A</span><span class="nv"> </span><span class="s">copy</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">your</span><span class="nv"> </span><span class="s">form</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">has</span><span class="nv"> </span><span class="s">been</span><span class="nv"> </span><span class="s">sent</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">your</span><span class="nv"> </span><span class="s">personal</span><span class="nv"> </span><span class="s">email."</span>
+<span class="pi">}</span>
+</code></pre>
+
+<aside class="notice">
+  <b>Authorization Header:</b>
+  <ul class="notice__list">
+        <li><code>Authorization: Bearer [JWT]</code></li>
+  </ul>
+</aside>
+
+<aside class="warning caution ">
+  <b>LOGIC CHECK NEEDED:</b>
+  <ul class="notice__list">
+      <li>Need to confirm how we send the form to the right Company 'CS email'</li>
+      <li>Need to confirm JSON response keys/values and formats</li>
+  </ul>
+</aside>
+
+<ul>
+<li><strong>Required Fields</strong>
+
+<ul>
+<li>message_type
+
+<ul>
+<li>Valid Options: <code>other</code>, <code>ask_question</code>, <code>assistance_needed</code>, <code>provide_feedback</code></li>
+</ul></li>
+<li>subject</li>
+<li>contact_preference
+
+<ul>
+<li>Valid Options: <code>phone</code>, <code>email</code></li>
+</ul></li>
+<li>message</li>
+</ul></li>
+</ul>
+
+<p><strong>NOTES:</strong></p>
+
+<ul>
+<li>On form submit, details are forwarded to company
+
+<ul>
+<li>Then the form details are forwarded to the User&#39;s email</li>
+</ul></li>
+</ul>

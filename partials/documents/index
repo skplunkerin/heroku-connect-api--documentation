@@ -1,0 +1,110 @@
+<h2 id='get-documents'>Get Documents</h2>
+<blockquote>
+<p>GET: /documents</p>
+</blockquote>
+
+<pre class="highlight conf tab-conf"><code>// <span class="n">Coming</span> <span class="n">soon</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// Coming soon</span>
+</code></pre>
+
+<blockquote>
+<p>Success:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">jwt"</span><span class="pi">:</span> <span class="nv">null</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">documents"</span><span class="pi">:</span> <span class="pi">[</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">bank_change"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">task_apikey"</span><span class="pi">:</span> <span class="nv">null</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Box</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">ID"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">filename.pdf"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">active"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">date_added"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2017-10-16T03:52:51Z"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">size"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0.23</span><span class="nv"> </span><span class="s">MB"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">download_url"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">url"</span>
+    <span class="pi">},</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">poa"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">task_apikey"</span><span class="pi">:</span> <span class="nv">null</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Box</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">ID"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">filename.pdf"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">active"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">date_added"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2017-10-16T03:52:46Z"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">size"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0.51</span><span class="nv"> </span><span class="s">MB"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">download_url"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">url"</span>
+    <span class="pi">},</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">add_debt"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">task_apikey"</span><span class="pi">:</span> <span class="nv">null</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Box</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">ID"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">filename.pdf"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">active"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">date_added"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2017-10-16T03:52:51Z"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">size"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0.03</span><span class="nv"> </span><span class="s">MB"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">download_url"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">url"</span>
+    <span class="pi">}</span>
+  <span class="pi">]</span>
+<span class="pi">}</span>
+</code></pre>
+
+<aside class="notice">
+  <b>Authorization Header:</b>
+  <ul class="notice__list">
+        <li><code>Authorization: Bearer [JWT]</code></li>
+  </ul>
+</aside>
+<h2 id='upload-document'>Upload Document</h2>
+<blockquote>
+<p>POST: /documents</p>
+</blockquote>
+
+<p><strong>WARNING:</strong> This endpoint is for <strong>GENERIC</strong> document uploads only (where additional info/process isn&#39;t needed, or where a Task endpoint isn&#39;t defined for a specific file upload type).</p>
+
+<p><strong>Use these Task enpdoints for the following document types:</strong></p>
+
+<ul>
+<li><strong><a href="#task-add-debt">Add Debt</a></strong></li>
+<li><strong><a href="#task-upload-bank-change-form">Upload Change Bank form</a></strong></li>
+<li><strong><a href="#task-upload-poa-form">Upload POA form</a></strong></li>
+</ul>
+
+<pre class="highlight conf tab-conf"><code>// <span class="n">Coming</span> <span class="n">soon</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// Coming soon</span>
+</code></pre>
+
+<blockquote>
+<p>Success:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">jwt"</span><span class="pi">:</span>          <span class="pi">,</span>
+  <span class="s2">"</span><span class="s">2fa_required"</span><span class="pi">:</span> <span class="nv">false</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">message"</span><span class="pi">:</span>      <span class="s2">"</span><span class="s">Thank</span><span class="nv"> </span><span class="s">you,</span><span class="nv"> </span><span class="s">your</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">will</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">processed</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">1</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">2</span><span class="nv"> </span><span class="s">business</span><span class="nv"> </span><span class="s">days"</span>
+<span class="pi">}</span>
+</code></pre>
+
+<aside class="notice">
+  <b>Authorization Header:</b>
+  <ul class="notice__list">
+        <li><code>Authorization: Bearer [JWT]</code></li>
+  </ul>
+</aside>
+
+<ul>
+<li><strong>Required fields:</strong>
+
+<ul>
+<li>file
+
+<ul>
+<li>size must be &lt;= 20MB</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p><strong>NOTES:</strong></p>
+
+<ul>
+<li><code>file</code> must be in PDF format</li>
+</ul>

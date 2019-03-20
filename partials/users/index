@@ -1,0 +1,1126 @@
+<h2 id='sign-in'>Sign in</h2>
+<blockquote>
+<p>POST: /users/sign_in</p>
+</blockquote>
+
+<pre class="highlight conf tab-conf"><code>// <span class="n">Coming</span> <span class="n">soon</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// Coming soon</span>
+</code></pre>
+
+<blockquote>
+<p>Success:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">jwt"</span><span class="pi">:</span> <span class="nv">null</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">2fa_required"</span><span class="pi">:</span> <span class="nv">false</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">user"</span><span class="pi">:</span> <span class="pi">{</span>
+    <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">API,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">Identifier</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">Salesforce"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">full_name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Steve</span><span class="nv"> </span><span class="s">Example"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">first_name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Steve"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">last_name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Example"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">email"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">example@example.com"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">mask_email"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">e*****e@e******.com"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">phone"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">(555)</span><span class="nv"> </span><span class="s">555-5555"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">mask_phone"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">******5555"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">contact_2fa_preference"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">email"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">program_status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Active</span><span class="nv"> </span><span class="s">Client"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">bank_processor_url"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://www.processor_url.com/"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">balance"</span><span class="pi">:</span> <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">total_debt"</span><span class="pi">:</span> <span class="nv">5350.0</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">total_balance"</span><span class="pi">:</span> <span class="nv">4000.55</span>
+    <span class="pi">},</span>
+    <span class="s2">"</span><span class="s">next_drafts"</span><span class="pi">:</span> <span class="pi">[</span>
+      <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">API,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">Identifier</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">Salesforce"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">amount"</span><span class="pi">:</span> <span class="nv">100.0</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">date"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2018-10-15T16:05:03Z"</span>
+      <span class="pi">},</span>
+      <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">API,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">Identifier</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">Salesforce"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">amount"</span><span class="pi">:</span> <span class="nv">100.0</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">date"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2018-11-15T16:05:03Z"</span>
+      <span class="pi">}</span>
+    <span class="pi">],</span>
+    <span class="s2">"</span><span class="s">debts"</span><span class="pi">:</span> <span class="pi">[</span>
+      <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">API,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">Identifier</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">Salesforce"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Student</span><span class="nv"> </span><span class="s">Loan"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">active"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">debt"</span><span class="pi">:</span> <span class="nv">535.0</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">balance"</span><span class="pi">:</span> <span class="nv">535.0</span>
+      <span class="pi">}</span>
+    <span class="pi">],</span>
+    <span class="s2">"</span><span class="s">tasks"</span><span class="pi">:</span> <span class="pi">[</span>
+      <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">confirm_email"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Email</span><span class="nv"> </span><span class="s">verification</span><span class="nv"> </span><span class="s">needed"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Confirmation</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">sent</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">email,</span><span class="nv"> </span><span class="s">please</span><span class="nv"> </span><span class="s">confirm"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">task_options"</span><span class="pi">:</span> <span class="pi">{</span>
+          <span class="s2">"</span><span class="s">todo"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">TODO"</span><span class="pi">,</span>
+          <span class="s2">"</span><span class="s">actions"</span><span class="pi">:</span> <span class="pi">[</span>
+            <span class="s2">"</span><span class="s">send_2fa"</span><span class="pi">,</span>
+            <span class="s2">"</span><span class="s">confirm_2fa"</span>
+          <span class="pi">],</span>
+          <span class="s2">"</span><span class="s">confirmed_email"</span><span class="pi">:</span> <span class="nv">false</span><span class="pi">,</span>
+          <span class="s2">"</span><span class="s">expired"</span><span class="pi">:</span> <span class="nv">false</span><span class="pi">,</span>
+          <span class="s2">"</span><span class="s">expires"</span><span class="pi">:</span> <span class="nv">false</span>
+        <span class="pi">},</span>
+        <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">unconfirmed"</span>
+      <span class="pi">},</span>
+      <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">reschedule_nsf"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">NSF"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Draft</span><span class="nv"> </span><span class="s">failed,</span><span class="nv"> </span><span class="s">please</span><span class="nv"> </span><span class="s">re-schedule</span><span class="nv"> </span><span class="s">NSF</span><span class="nv"> </span><span class="s">payment"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">task_options"</span><span class="pi">:</span> <span class="pi">{</span>
+          <span class="s2">"</span><span class="s">todo"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">TODO"</span>
+        <span class="pi">},</span>
+        <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">NSF"</span>
+      <span class="pi">},</span>
+      <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">call_needed"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">On-Boarding</span><span class="nv"> </span><span class="s">Call</span><span class="nv"> </span><span class="s">Due"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Please</span><span class="nv"> </span><span class="s">call</span><span class="nv"> </span><span class="s">(111)</span><span class="nv"> </span><span class="s">111-1111"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">task_options"</span><span class="pi">:</span> <span class="pi">{</span>
+          <span class="s2">"</span><span class="s">phone_number"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">(111)</span><span class="nv"> </span><span class="s">111-1111"</span>
+        <span class="pi">},</span>
+        <span class="s2">"</span><span class="s">due_date"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2017-12-11T07:00:00Z"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Not</span><span class="nv"> </span><span class="s">Started"</span>
+      <span class="pi">},</span>
+      <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">call_needed"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Year</span><span class="nv"> </span><span class="s">2</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Q3</span><span class="nv"> </span><span class="s">Account</span><span class="nv"> </span><span class="s">Review</span><span class="nv"> </span><span class="s">Due"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Please</span><span class="nv"> </span><span class="s">call</span><span class="nv"> </span><span class="s">(111)</span><span class="nv"> </span><span class="s">111-1111"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">task_options"</span><span class="pi">:</span> <span class="pi">{</span>
+          <span class="s2">"</span><span class="s">phone_number"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">(111)</span><span class="nv"> </span><span class="s">111-1111"</span>
+        <span class="pi">},</span>
+        <span class="s2">"</span><span class="s">due_date"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2017-12-11T07:00:00Z"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Not</span><span class="nv"> </span><span class="s">Started"</span>
+      <span class="pi">},</span>
+      <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">call_needed"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">7</span><span class="nv"> </span><span class="s">Month</span><span class="nv"> </span><span class="s">Strategy</span><span class="nv"> </span><span class="s">Call</span><span class="nv"> </span><span class="s">Due"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Please</span><span class="nv"> </span><span class="s">call</span><span class="nv"> </span><span class="s">(111)</span><span class="nv"> </span><span class="s">111-1111"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">task_options"</span><span class="pi">:</span> <span class="pi">{</span>
+          <span class="s2">"</span><span class="s">phone_number"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">(111)</span><span class="nv"> </span><span class="s">111-1111"</span>
+        <span class="pi">},</span>
+        <span class="s2">"</span><span class="s">due_date"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2017-12-11T07:00:00Z"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Not</span><span class="nv"> </span><span class="s">Started"</span>
+      <span class="pi">},</span>
+      <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">offer"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">OFFER_TASK_APIKEY"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Offer-DDDDD"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Click</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">accept,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">call</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">decline"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">task_options"</span><span class="pi">:</span> <span class="pi">{</span>
+          <span class="s2">"</span><span class="s">phone_number"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">(555)</span><span class="nv"> </span><span class="s">555-5555"</span>
+        <span class="pi">},</span>
+        <span class="s2">"</span><span class="s">offer_amount"</span><span class="pi">:</span> <span class="nv">885.6</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">original_balance"</span><span class="pi">:</span> <span class="nv">2214</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">nds_creditor_info"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">NDS</span><span class="nv"> </span><span class="s">Current:</span><span class="nv"> </span><span class="s">company</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">LLC&lt;br&gt;NDS</span><span class="nv"> </span><span class="s">Original:</span><span class="nv"> </span><span class="s">Company/SYNCB"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">number_of_fee_payments"</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">number_of_payments"</span><span class="pi">:</span> <span class="nv">4</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">first_payment_date"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2018-06-22T00:00:00Z"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">last_payment_date"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2018-09-22T00:00:00Z"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Pending</span><span class="nv"> </span><span class="s">Client</span><span class="nv"> </span><span class="s">Approval"</span>
+      <span class="pi">},</span>
+      <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">poa"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">GT-DDDDDD"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Please</span><span class="nv"> </span><span class="s">sign</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">upload</span><span class="nv"> </span><span class="s">POA</span><span class="nv"> </span><span class="s">Form"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Letter</span><span class="nv"> </span><span class="s">Pending"</span>
+      <span class="pi">},</span>
+      <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">bank_change"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Change</span><span class="nv"> </span><span class="s">Bank</span><span class="nv"> </span><span class="s">Request</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Pending"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">This</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">probably</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">shown</span><span class="nv"> </span><span class="s">under</span><span class="nv"> </span><span class="s">Notifications</span><span class="nv"> </span><span class="s">since</span><span class="nv"> </span><span class="s">no</span><span class="nv"> </span><span class="s">action</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">made</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">User"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Completed"</span>
+      <span class="pi">}</span>
+    <span class="pi">],</span>
+    <span class="s2">"</span><span class="s">notifications"</span><span class="pi">:</span> <span class="pi">[</span>
+      <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">API,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">Identifier</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">Salesforce"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Example</span><span class="nv"> </span><span class="s">Notification"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">read"</span><span class="pi">:</span> <span class="nv">false</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">date"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2018-10-15T16:05:03Z"</span>
+      <span class="pi">}</span>
+    <span class="pi">],</span>
+    <span class="s2">"</span><span class="s">documents"</span><span class="pi">:</span> <span class="pi">[</span>
+      <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">bank_change"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">task_apikey"</span><span class="pi">:</span> <span class="nv">null</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Box</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">ID"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">filename.pdf"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">active"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">date_added"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2017-10-16T03:52:51Z"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">size"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0.23</span><span class="nv"> </span><span class="s">MB"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">download_url"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">url"</span>
+      <span class="pi">},</span>
+      <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">poa"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">task_apikey"</span><span class="pi">:</span> <span class="nv">null</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Box</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">ID"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">filename.pdf"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">active"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">date_added"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2017-10-16T03:52:46Z"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">size"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0.51</span><span class="nv"> </span><span class="s">MB"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">download_url"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">url"</span>
+      <span class="pi">},</span>
+      <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">add_debt"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">task_apikey"</span><span class="pi">:</span> <span class="nv">null</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Box</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">ID"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">filename.pdf"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">active"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">date_added"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2017-10-16T03:52:51Z"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">size"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0.03</span><span class="nv"> </span><span class="s">MB"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">download_url"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">url"</span>
+      <span class="pi">}</span>
+    <span class="pi">],</span>
+    <span class="s2">"</span><span class="s">blank_forms"</span><span class="pi">:</span> <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">bank_change"</span><span class="pi">:</span> <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Box</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">ID"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Change</span><span class="nv"> </span><span class="s">Bank</span><span class="nv"> </span><span class="s">Info</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">GCS.pdf"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="nv">null</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">date_added"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2018-06-22T21:19:14Z"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">size"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0.07</span><span class="nv"> </span><span class="s">MB"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">download_url"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">url"</span>
+      <span class="pi">}</span>
+    <span class="pi">}</span>
+  <span class="pi">}</span>
+<span class="pi">}</span>
+</code></pre>
+
+<blockquote>
+<p>If 2FA Required:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">2fa_required"</span><span class="pi">:</span> <span class="nv">true</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">error"</span><span class="pi">:</span>        <span class="s2">"</span><span class="s">2FA</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">required,</span><span class="nv"> </span><span class="s">please</span><span class="nv"> </span><span class="s">resend</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">auth</span><span class="nv"> </span><span class="s">code"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">code_sent_message"</span><span class="pi">:</span>  <span class="s2">"</span><span class="s">Text</span><span class="nv"> </span><span class="s">message</span><span class="nv"> </span><span class="s">sent</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">******5555"</span>
+<span class="pi">}</span>
+</code></pre>
+
+<aside class="notice">
+  <b>Authorization Header:</b>
+  <ul class="notice__list">
+        <li><code>Authorization: Token token=[COMPANY_APIKEY]</code></li>
+  </ul>
+</aside>
+
+<aside class="warning caution ">
+  <b>CONFIRMATION NEEDED:</b>
+  <ul class="notice__list">
+      <li>Need to confirm JSON response keys/values and formats</li>
+  </ul>
+</aside>
+
+<ul>
+<li><strong>Required fields:</strong>
+
+<ul>
+<li><strong>1st attempt (non-2FA):</strong>
+
+<ul>
+<li>email</li>
+<li>password</li>
+</ul></li>
+<li><strong>2nd attempt (2FA):</strong>
+
+<ul>
+<li>email</li>
+<li>password</li>
+<li>login_code</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p><strong>This endpoint is coming soon.</strong></p>
+
+<p><strong>NOTES:</strong></p>
+
+<ul>
+<li>The <strong>2nd 2FA attempt</strong> is needed if the 1st attempt prompts the User with a <code>&quot;2fa_required&quot;: true</code> response.</li>
+</ul>
+<h2 id='sign-up-search'>Sign up - Search</h2>
+<blockquote>
+<p>POST: /users/sign_up_search</p>
+</blockquote>
+
+<pre class="highlight conf tab-conf"><code>// <span class="n">Coming</span> <span class="n">soon</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// Coming soon</span>
+</code></pre>
+
+<blockquote>
+<p>Success - Found:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">message"</span><span class="pi">:</span>  <span class="s2">"</span><span class="s">Client</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">found"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">user"</span><span class="pi">:</span> <span class="pi">{</span>
+    <span class="s2">"</span><span class="s">email"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">t**t@e******.com"</span><span class="pi">,</span>  <span class="c1"># test@example.com</span>
+    <span class="s2">"</span><span class="s">phone"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">********11"</span>         <span class="c1"># 1111111111</span>
+  <span class="pi">}</span>
+<span class="pi">}</span>
+</code></pre>
+
+<blockquote>
+<p>Error - Unable to find info:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">error"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">We</span><span class="nv"> </span><span class="s">were</span><span class="nv"> </span><span class="s">unable</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">locate</span><span class="nv"> </span><span class="s">your</span><span class="nv"> </span><span class="s">account</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">given</span><span class="nv"> </span><span class="s">information.</span><span class="nv"> </span><span class="s">Please</span><span class="nv"> </span><span class="s">check</span><span class="nv"> </span><span class="s">your</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">contact</span><span class="nv"> </span><span class="s">us</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">you</span><span class="nv"> </span><span class="s">have</span><span class="nv"> </span><span class="s">further</span><span class="nv"> </span><span class="s">issues.</span><span class="nv"> </span><span class="s">We</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">reached</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">href=</span><span class="se">\"</span><span class="s">tel:(555)</span><span class="nv"> </span><span class="s">555-5555</span><span class="se">\"</span><span class="s">&gt;(555)</span><span class="nv"> </span><span class="s">555-5555&lt;/a&gt;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">href=</span><span class="se">\"</span><span class="s">mailto:cs@example.com</span><span class="se">\"</span><span class="s">&gt;cs@example.com&lt;/a&gt;"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">error_phone"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">(555)</span><span class="nv"> </span><span class="s">555-5555"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">error_email"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">cs@example.com"</span>
+<span class="pi">}</span>
+</code></pre>
+
+<blockquote>
+<p>Error - User exists, sign in required:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">error"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">This</span><span class="nv"> </span><span class="s">program</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">already</span><span class="nv"> </span><span class="s">has</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">account.</span><span class="nv"> </span><span class="s">Please</span><span class="nv"> </span><span class="s">login</span><span class="nv"> </span><span class="s">using</span><span class="nv"> </span><span class="s">your</span><span class="nv"> </span><span class="s">email</span><span class="nv"> </span><span class="s">address.</span><span class="nv"> </span><span class="s">If</span><span class="nv"> </span><span class="s">you</span><span class="nv"> </span><span class="s">have</span><span class="nv"> </span><span class="s">additional</span><span class="nv"> </span><span class="s">issues,</span><span class="nv"> </span><span class="s">contact</span><span class="nv"> </span><span class="s">us</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">href=</span><span class="se">\"</span><span class="s">tel:(555)</span><span class="nv"> </span><span class="s">555-5555</span><span class="se">\"</span><span class="s">&gt;(555)</span><span class="nv"> </span><span class="s">555-5555&lt;/a&gt;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">href=</span><span class="se">\"</span><span class="s">mailto:cs@example.com</span><span class="se">\"</span><span class="s">&gt;cs@example.com&lt;/a&gt;"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">error_phone"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">(555)</span><span class="nv"> </span><span class="s">555-5555"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">error_email"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">cs@example.com"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">user"</span><span class="pi">:</span> <span class="pi">{</span>
+    <span class="s2">"</span><span class="s">email"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">e*****e@e******.com"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">phone"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">******5555"</span>
+  <span class="pi">}</span>
+<span class="pi">}</span>
+</code></pre>
+
+<aside class="notice">
+  <b>Authorization Header:</b>
+  <ul class="notice__list">
+        <li><code>Authorization: Token token=[COMPANY_APIKEY]</code></li>
+  </ul>
+</aside>
+
+<ul>
+<li><strong>Required fields:</strong>
+
+<ul>
+<li>customer_number</li>
+<li>dob</li>
+<li>ssn_last_4</li>
+</ul></li>
+</ul>
+
+<p><strong>NOTES:</strong></p>
+
+<ul>
+<li>Use this endpoint first to verify the User&#39;s info can be found before we ask them to continue <a href="#sign-up">Sign Up</a>
+
+<ul>
+<li>You&#39;ll get a masked version of their <code>email</code>/<code>phone</code> (if found, else NULL) to use in the interface
+
+<ul>
+<li>If you receive NULL, prompt the User for their information during <a href="#sign-up">Sign Up</a></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id='sign-up'>Sign up</h2>
+<blockquote>
+<p>POST: /users/sign_up</p>
+</blockquote>
+
+<pre class="highlight conf tab-conf"><code>// <span class="n">Coming</span> <span class="n">soon</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// Coming soon</span>
+</code></pre>
+
+<blockquote>
+<p>Success:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">jwt"</span><span class="pi">:</span>                <span class="pi">,</span>
+  <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span>             <span class="pi">,</span>
+  <span class="s2">"</span><span class="s">2fa_required"</span><span class="pi">:</span>       <span class="nv">true</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">message"</span><span class="pi">:</span>            <span class="s2">"</span><span class="s">User</span><span class="nv"> </span><span class="s">created,</span><span class="nv"> </span><span class="s">2FA</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">required"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">code_sent_message"</span><span class="pi">:</span>  <span class="s2">"</span><span class="s">Text</span><span class="nv"> </span><span class="s">message</span><span class="nv"> </span><span class="s">sent</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">******5555"</span>
+<span class="pi">}</span>
+</code></pre>
+
+<blockquote>
+<p>Error - Unable to find info:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">error"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">We</span><span class="nv"> </span><span class="s">were</span><span class="nv"> </span><span class="s">unable</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">locate</span><span class="nv"> </span><span class="s">your</span><span class="nv"> </span><span class="s">account</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">given</span><span class="nv"> </span><span class="s">information.</span><span class="nv"> </span><span class="s">Please</span><span class="nv"> </span><span class="s">check</span><span class="nv"> </span><span class="s">your</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">contact</span><span class="nv"> </span><span class="s">us</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">you</span><span class="nv"> </span><span class="s">have</span><span class="nv"> </span><span class="s">further</span><span class="nv"> </span><span class="s">issues.</span><span class="nv"> </span><span class="s">We</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">reached</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">href=</span><span class="se">\"</span><span class="s">tel:(555)</span><span class="nv"> </span><span class="s">555-5555</span><span class="se">\"</span><span class="s">&gt;(555)</span><span class="nv"> </span><span class="s">555-5555&lt;/a&gt;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">href=</span><span class="se">\"</span><span class="s">mailto:cs@example.com</span><span class="se">\"</span><span class="s">&gt;cs@example.com&lt;/a&gt;"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">error_phone"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">(555)</span><span class="nv"> </span><span class="s">555-5555"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">error_email"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">cs@example.com"</span>
+<span class="pi">}</span>
+</code></pre>
+
+<blockquote>
+<p>Error - User exists, sign in required:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">error"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">This</span><span class="nv"> </span><span class="s">program</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">already</span><span class="nv"> </span><span class="s">has</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">account.</span><span class="nv"> </span><span class="s">Please</span><span class="nv"> </span><span class="s">login</span><span class="nv"> </span><span class="s">using</span><span class="nv"> </span><span class="s">your</span><span class="nv"> </span><span class="s">email</span><span class="nv"> </span><span class="s">address.</span><span class="nv"> </span><span class="s">If</span><span class="nv"> </span><span class="s">you</span><span class="nv"> </span><span class="s">have</span><span class="nv"> </span><span class="s">additional</span><span class="nv"> </span><span class="s">issues,</span><span class="nv"> </span><span class="s">contact</span><span class="nv"> </span><span class="s">us</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">href=</span><span class="se">\"</span><span class="s">tel:(555)</span><span class="nv"> </span><span class="s">555-5555</span><span class="se">\"</span><span class="s">&gt;(555)</span><span class="nv"> </span><span class="s">555-5555&lt;/a&gt;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">href=</span><span class="se">\"</span><span class="s">mailto:cs@example.com</span><span class="se">\"</span><span class="s">&gt;cs@example.com&lt;/a&gt;"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">error_phone"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">(555)</span><span class="nv"> </span><span class="s">555-5555"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">error_email"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">cs@example.com"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">user"</span><span class="pi">:</span> <span class="pi">{</span>
+    <span class="s2">"</span><span class="s">email"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">e*****e@e******.com"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">phone"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">******5555"</span>
+  <span class="pi">}</span>
+<span class="pi">}</span>
+</code></pre>
+
+<aside class="notice">
+  <b>Authorization Header:</b>
+  <ul class="notice__list">
+        <li><code>Authorization: Token token=[COMPANY_APIKEY]</code></li>
+  </ul>
+</aside>
+
+<ul>
+<li><strong>Required fields:</strong>
+
+<ul>
+<li>customer_number</li>
+<li>dob</li>
+<li>ssn_last_4</li>
+<li>password</li>
+<li>password_confirmation</li>
+<li>contact_2fa_preference
+
+<ul>
+<li>Valid Options: <code>sms</code>, <code>email</code>, <code>call</code></li>
+</ul></li>
+</ul></li>
+<li><strong>Required if <a href="#sign-up-search">Sign up search</a> returns NULL:</strong>
+
+<ul>
+<li>email</li>
+<li>phone</li>
+</ul></li>
+</ul>
+
+<p><strong>NOTES:</strong></p>
+
+<ul>
+<li>You need to hit <a href="#sign-up-search">Sign up search</a> endpoint first to see if <code>email</code> or <code>phone</code> is required.</li>
+</ul>
+<h2 id='send-2fa'>Send 2FA</h2>
+<blockquote>
+<p>POST: /users/send_2fa</p>
+</blockquote>
+
+<pre class="highlight conf tab-conf"><code>// <span class="n">Coming</span> <span class="n">soon</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// Coming soon</span>
+</code></pre>
+
+<blockquote>
+<p>Success - Send/re-send 2FA code:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">2fa_required"</span><span class="pi">:</span>       <span class="nv">true</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">message"</span><span class="pi">:</span>            <span class="s2">"</span><span class="s">Code</span><span class="nv"> </span><span class="s">created"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">code_sent_message"</span><span class="pi">:</span>  <span class="s2">"</span><span class="s">Text</span><span class="nv"> </span><span class="s">message</span><span class="nv"> </span><span class="s">sent</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">******5555"</span>
+<span class="pi">}</span>
+</code></pre>
+
+<blockquote>
+<p>Success - Reset password confirmation:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">2fa_required"</span><span class="pi">:</span>       <span class="nv">false</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">message"</span><span class="pi">:</span>            <span class="s2">"</span><span class="s">Reset</span><span class="nv"> </span><span class="s">key</span><span class="nv"> </span><span class="s">created"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">code_sent_message"</span><span class="pi">:</span>  <span class="s2">"</span><span class="s">Text</span><span class="nv"> </span><span class="s">message</span><span class="nv"> </span><span class="s">sent</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">******5555"</span>
+<span class="pi">}</span>
+</code></pre>
+
+<blockquote>
+<p>Error</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">error"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Unable</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">find</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">given</span><span class="nv"> </span><span class="s">information,</span><span class="nv"> </span><span class="s">please</span><span class="nv"> </span><span class="s">try</span><span class="nv"> </span><span class="s">again</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">contact</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">representative</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">confirm</span><span class="nv"> </span><span class="s">your</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">correct"</span>
+<span class="pi">}</span>
+</code></pre>
+
+<aside class="notice">
+  <b>Authorization Header:</b>
+  <ul class="notice__list">
+        <li><code>Authorization: Token token=[COMPANY_APIKEY]</code></li>
+  </ul>
+</aside>
+
+<aside class="warning caution ">
+  <b>LOGIC CHECK NEEDED:</b>
+  <ul class="notice__list">
+      <li>Should we combine this with forgot_password endpoint?</li>
+  </ul>
+</aside>
+
+<ul>
+<li><strong>Required fields:</strong>
+
+<ul>
+<li>code_type
+
+<ul>
+<li>Valid Options: <code>required_auth_code</code>, <code>auth_code</code>, <code>forgot_password</code></li>
+</ul></li>
+<li><strong>ONE OF THESE:</strong>
+
+<ul>
+<li>find_by_apikey - <em>used to &quot;send/re-send auth code to preferred contact method (unless contact_method is specified)</em></li>
+<li>find_by_email - <em>find account and send forgot password code via preferred contact method (unless contact_method is specified)</em></li>
+<li>find_by_phone - <em>find account and send forgot password code via preferred contact method (unless contact_method is specified)</em></li>
+</ul></li>
+</ul></li>
+<li><strong>Optional fields:</strong>
+
+<ul>
+<li>contact_method - <em>if this is not defined, API will use their 2FA contact preference</em>
+
+<ul>
+<li>Valid Options: <code>sms</code>, <code>email</code>, <code>call</code></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p><strong>NOTES:</strong></p>
+
+<ul>
+<li>To get the User APIKEY, save that info when the User successfully logs in or from other endpoints</li>
+<li><code>code_type</code> will determine if 2FA code is required or not (i.e. for non-required Email confirm), or if password reset key is needed</li>
+<li><code>contact_method</code> will determine how the code is sent to User
+
+<ul>
+<li><strong>NOTE:</strong> for 2FA codes, the method specified here will determine how the code is set in the API (in addition to how the code is sent).<br/>
+<em>i.e. if current required 2FA is on SMS, but <code>contact_method</code> is set to Email (and <code>code_type</code> set to <strong>required_auth_code</strong>) then the new required 2FA will now be on Email instead of SMS.</em></li>
+</ul></li>
+</ul>
+<h2 id='confirm-2fa'>Confirm 2FA</h2>
+<blockquote>
+<p>POST: /users/confirm_2fa</p>
+</blockquote>
+
+<pre class="highlight conf tab-conf"><code>// <span class="n">Coming</span> <span class="n">soon</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// Coming soon</span>
+</code></pre>
+
+<blockquote>
+<p>Success - Using Company APIKEY authentication:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">message"</span><span class="pi">:</span>    <span class="s2">"</span><span class="s">Code</span><span class="nv"> </span><span class="s">confirmed,</span><span class="nv"> </span><span class="s">please</span><span class="nv"> </span><span class="s">login"</span>
+<span class="pi">}</span>
+</code></pre>
+
+<blockquote>
+<p>Success - Using User <code>jwt</code> authentication:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">jwt"</span><span class="pi">:</span>          <span class="pi">,</span>
+  <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span>       <span class="pi">,</span>
+  <span class="s2">"</span><span class="s">2fa_required"</span><span class="pi">:</span> <span class="nv">false</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">message"</span><span class="pi">:</span>      <span class="s2">"</span><span class="s">Code</span><span class="nv"> </span><span class="s">confirmed"</span>
+<span class="pi">}</span>
+</code></pre>
+
+<blockquote>
+<p>Error:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">error"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Code</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">invalid</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">expired."</span>
+<span class="pi">}</span>
+</code></pre>
+
+<aside class="notice">
+  <b>Authorization Header:</b>
+  <ul class="notice__list">
+        <li><code>Authorization: Token token=[COMPANY_APIKEY]</code></li>
+  </ul>
+</aside>
+
+<p><strong>OR</strong></p>
+
+<aside class="notice">
+  <b>Authorization Header:</b>
+  <ul class="notice__list">
+        <li><code>Authorization: Bearer [JWT]</code></li>
+  </ul>
+</aside>
+
+<aside class="warning caution ">
+  <b>LOGIC CHECK NEEDED:</b>
+  <ul class="notice__list">
+      <li>If User entered wrong info, or don't see the email/text how should we re-send the confirmation if needed?</li>
+  </ul>
+</aside>
+
+<ul>
+<li><strong>Required fields:</strong>
+
+<ul>
+<li>auth_code</li>
+</ul></li>
+</ul>
+
+<p><strong>NOTES:</strong></p>
+
+<ul>
+<li>This endpoint can be used to confirm initial phone/email on sign_up 2FA, regular 2FA, as well as when the email needs to be confirmed (if chosen sign_up contact_preference was phone sms or call, we&#39;ll need to send email confirmation)</li>
+</ul>
+<h2 id='forgot-password'>Forgot password</h2>
+<p>Please see <a href="#send-2fa">Send 2FA endpoint</a></p>
+<h2 id='reset-password'>Reset password</h2>
+<blockquote>
+<p>POST: /users/reset_password</p>
+</blockquote>
+
+<pre class="highlight conf tab-conf"><code>// <span class="n">Coming</span> <span class="n">soon</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// Coming soon</span>
+</code></pre>
+
+<blockquote>
+<p>Success - 1st check:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">message"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Confirmed,</span><span class="nv"> </span><span class="s">please</span><span class="nv"> </span><span class="s">resend</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">new</span><span class="nv"> </span><span class="s">password."</span>
+<span class="pi">}</span>
+</code></pre>
+
+<blockquote>
+<p>Success - 2nd check:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">message"</span><span class="pi">:</span>  <span class="s2">"</span><span class="s">Password</span><span class="nv"> </span><span class="s">reset,</span><span class="nv"> </span><span class="s">please</span><span class="nv"> </span><span class="s">login."</span>
+<span class="pi">}</span>
+</code></pre>
+
+<aside class="notice">
+  <b>Authorization Header:</b>
+  <ul class="notice__list">
+        <li><code>Authorization: Token token=[COMPANY_APIKEY]</code></li>
+  </ul>
+</aside>
+
+<ul>
+<li><p><strong>Required fields:</strong></p>
+
+<ul>
+<li><strong>1st check:</strong> <em>(before the User enters a new password, you can (<strong>preferred</strong>) to verify the info is correct/hasn&#39;t expired)</em>
+
+<ul>
+<li>reset_key</li>
+</ul></li>
+<li><strong>2nd check:</strong> <em>(this actually resets the password)</em>
+
+<ul>
+<li>reset_key</li>
+<li>new_password</li>
+<li>new_password_confirmation</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p><strong>NOTES:</strong></p>
+
+<ul>
+<li>Hitting this endpoint without the password fields will verify if the <code>reset_key</code> is valid, <strong>please do this first to confirm code hasn&#39;t expired, default is 15 minutes</strong>.</li>
+</ul>
+<h2 id='show-dashboard'>Show Dashboard</h2>
+<blockquote>
+<p>GET: /users/[USER_APIKEY]</p>
+</blockquote>
+
+<pre class="highlight conf tab-conf"><code>// <span class="n">Coming</span> <span class="n">soon</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// Coming soon</span>
+</code></pre>
+
+<blockquote>
+<p>Success:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">jwt"</span><span class="pi">:</span> <span class="nv">null</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">2fa_required"</span><span class="pi">:</span> <span class="nv">true</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">API,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">Identifier</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">Salesforce"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">full_name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Steve</span><span class="nv"> </span><span class="s">Example"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">first_name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Steve"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">last_name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Example"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">email"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">example@example.com"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">mask_email"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">e*****e@e******.com"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">phone"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">(555)</span><span class="nv"> </span><span class="s">555-5555"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">mask_phone"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">******5555"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">contact_2fa_preference"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">email"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">program_status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Active</span><span class="nv"> </span><span class="s">Client"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">bank_processor_url"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://www.processor_url.com/"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">balance"</span><span class="pi">:</span> <span class="pi">{</span>
+    <span class="s2">"</span><span class="s">total_debt"</span><span class="pi">:</span> <span class="nv">5350.0</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">total_balance"</span><span class="pi">:</span> <span class="nv">4000.55</span>
+  <span class="pi">},</span>
+  <span class="s2">"</span><span class="s">next_drafts"</span><span class="pi">:</span> <span class="pi">[</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">API,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">Identifier</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">Salesforce"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">amount"</span><span class="pi">:</span> <span class="nv">100.0</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">date"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2018-10-15T16:05:03Z"</span>
+    <span class="pi">},</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">API,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">Identifier</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">Salesforce"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">amount"</span><span class="pi">:</span> <span class="nv">100.0</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">date"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2018-11-15T16:05:03Z"</span>
+    <span class="pi">}</span>
+  <span class="pi">],</span>
+  <span class="s2">"</span><span class="s">debts"</span><span class="pi">:</span> <span class="pi">[</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">API,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">Identifier</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">Salesforce"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Student</span><span class="nv"> </span><span class="s">Loan"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">active"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">debt"</span><span class="pi">:</span> <span class="nv">535.0</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">balance"</span><span class="pi">:</span> <span class="nv">535.0</span>
+    <span class="pi">}</span>
+  <span class="pi">],</span>
+  <span class="s2">"</span><span class="s">tasks"</span><span class="pi">:</span> <span class="pi">[</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">confirm_email"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Email</span><span class="nv"> </span><span class="s">verification</span><span class="nv"> </span><span class="s">needed"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Confirmation</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">sent</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">email,</span><span class="nv"> </span><span class="s">please</span><span class="nv"> </span><span class="s">confirm"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">task_options"</span><span class="pi">:</span> <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">todo"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">TODO"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">actions"</span><span class="pi">:</span> <span class="pi">[</span>
+          <span class="s2">"</span><span class="s">send_2fa"</span><span class="pi">,</span>
+          <span class="s2">"</span><span class="s">confirm_2fa"</span>
+        <span class="pi">],</span>
+        <span class="s2">"</span><span class="s">confirmed_email"</span><span class="pi">:</span> <span class="nv">false</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">expired"</span><span class="pi">:</span> <span class="nv">false</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">expires"</span><span class="pi">:</span> <span class="nv">false</span>
+      <span class="pi">},</span>
+      <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">unconfirmed"</span>
+    <span class="pi">},</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">reschedule_nsf"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">NSF"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Draft</span><span class="nv"> </span><span class="s">failed,</span><span class="nv"> </span><span class="s">please</span><span class="nv"> </span><span class="s">re-schedule</span><span class="nv"> </span><span class="s">NSF</span><span class="nv"> </span><span class="s">payment"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">task_options"</span><span class="pi">:</span> <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">todo"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">TODO"</span>
+      <span class="pi">},</span>
+      <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">NSF"</span>
+    <span class="pi">},</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">call_needed"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">On-Boarding</span><span class="nv"> </span><span class="s">Call</span><span class="nv"> </span><span class="s">Due"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Please</span><span class="nv"> </span><span class="s">call</span><span class="nv"> </span><span class="s">(111)</span><span class="nv"> </span><span class="s">111-1111"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">task_options"</span><span class="pi">:</span> <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">phone_number"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">(111)</span><span class="nv"> </span><span class="s">111-1111"</span>
+      <span class="pi">},</span>
+      <span class="s2">"</span><span class="s">due_date"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2017-12-11T07:00:00Z"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Not</span><span class="nv"> </span><span class="s">Started"</span>
+    <span class="pi">},</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">call_needed"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Year</span><span class="nv"> </span><span class="s">2</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Q3</span><span class="nv"> </span><span class="s">Account</span><span class="nv"> </span><span class="s">Review</span><span class="nv"> </span><span class="s">Due"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Please</span><span class="nv"> </span><span class="s">call</span><span class="nv"> </span><span class="s">(111)</span><span class="nv"> </span><span class="s">111-1111"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">task_options"</span><span class="pi">:</span> <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">phone_number"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">(111)</span><span class="nv"> </span><span class="s">111-1111"</span>
+      <span class="pi">},</span>
+      <span class="s2">"</span><span class="s">due_date"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2017-12-11T07:00:00Z"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Not</span><span class="nv"> </span><span class="s">Started"</span>
+    <span class="pi">},</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">call_needed"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">7</span><span class="nv"> </span><span class="s">Month</span><span class="nv"> </span><span class="s">Strategy</span><span class="nv"> </span><span class="s">Call</span><span class="nv"> </span><span class="s">Due"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Please</span><span class="nv"> </span><span class="s">call</span><span class="nv"> </span><span class="s">(111)</span><span class="nv"> </span><span class="s">111-1111"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">task_options"</span><span class="pi">:</span> <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">phone_number"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">(111)</span><span class="nv"> </span><span class="s">111-1111"</span>
+      <span class="pi">},</span>
+      <span class="s2">"</span><span class="s">due_date"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2017-12-11T07:00:00Z"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Not</span><span class="nv"> </span><span class="s">Started"</span>
+    <span class="pi">},</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">offer"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">OFFER_TASK_APIKEY"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Offer-DDDDD"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Click</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">accept,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">call</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">decline"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">task_options"</span><span class="pi">:</span> <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">phone_number"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">(555)</span><span class="nv"> </span><span class="s">555-5555"</span>
+      <span class="pi">},</span>
+      <span class="s2">"</span><span class="s">offer_amount"</span><span class="pi">:</span> <span class="nv">885.6</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">original_balance"</span><span class="pi">:</span> <span class="nv">2214</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">nds_creditor_info"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">NDS</span><span class="nv"> </span><span class="s">Current:</span><span class="nv"> </span><span class="s">company</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">LLC&lt;br&gt;NDS</span><span class="nv"> </span><span class="s">Original:</span><span class="nv"> </span><span class="s">Company/SYNCB"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">number_of_fee_payments"</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">number_of_payments"</span><span class="pi">:</span> <span class="nv">4</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">first_payment_date"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2018-06-22T00:00:00Z"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">last_payment_date"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2018-09-22T00:00:00Z"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Pending</span><span class="nv"> </span><span class="s">Client</span><span class="nv"> </span><span class="s">Approval"</span>
+    <span class="pi">},</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">poa"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">GT-DDDDDD"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Please</span><span class="nv"> </span><span class="s">sign</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">upload</span><span class="nv"> </span><span class="s">POA</span><span class="nv"> </span><span class="s">Form"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Letter</span><span class="nv"> </span><span class="s">Pending"</span>
+    <span class="pi">},</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">bank_change"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Change</span><span class="nv"> </span><span class="s">Bank</span><span class="nv"> </span><span class="s">Request</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Pending"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">This</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">probably</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">shown</span><span class="nv"> </span><span class="s">under</span><span class="nv"> </span><span class="s">Notifications</span><span class="nv"> </span><span class="s">since</span><span class="nv"> </span><span class="s">no</span><span class="nv"> </span><span class="s">action</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">made</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">User"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Completed"</span>
+    <span class="pi">}</span>
+  <span class="pi">],</span>
+  <span class="s2">"</span><span class="s">notifications"</span><span class="pi">:</span> <span class="pi">[</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">API,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">Identifier</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">Salesforce"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Example</span><span class="nv"> </span><span class="s">Notification"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">read"</span><span class="pi">:</span> <span class="nv">false</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">date"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2018-10-15T16:05:03Z"</span>
+    <span class="pi">}</span>
+  <span class="pi">],</span>
+  <span class="s2">"</span><span class="s">documents"</span><span class="pi">:</span> <span class="pi">[</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">bank_change"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">task_apikey"</span><span class="pi">:</span> <span class="nv">null</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Box</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">ID"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">filename.pdf"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">active"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">date_added"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2017-10-16T03:52:51Z"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">size"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0.23</span><span class="nv"> </span><span class="s">MB"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">download_url"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">url"</span>
+    <span class="pi">},</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">poa"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">task_apikey"</span><span class="pi">:</span> <span class="nv">null</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Box</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">ID"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">filename.pdf"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">active"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">date_added"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2017-10-16T03:52:46Z"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">size"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0.51</span><span class="nv"> </span><span class="s">MB"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">download_url"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">url"</span>
+    <span class="pi">},</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">add_debt"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">task_apikey"</span><span class="pi">:</span> <span class="nv">null</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Box</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">ID"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">filename.pdf"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">active"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">date_added"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2017-10-16T03:52:51Z"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">size"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0.03</span><span class="nv"> </span><span class="s">MB"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">download_url"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">url"</span>
+    <span class="pi">}</span>
+  <span class="pi">],</span>
+  <span class="s2">"</span><span class="s">blank_forms"</span><span class="pi">:</span> <span class="pi">{</span>
+    <span class="s2">"</span><span class="s">bank_change"</span><span class="pi">:</span> <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Box</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">ID"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Change</span><span class="nv"> </span><span class="s">Bank</span><span class="nv"> </span><span class="s">Info</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">GCS.pdf"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="nv">null</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">date_added"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2018-06-22T21:19:14Z"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">size"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0.07</span><span class="nv"> </span><span class="s">MB"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">download_url"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">url"</span>
+    <span class="pi">}</span>
+  <span class="pi">}</span>
+<span class="pi">}</span>
+</code></pre>
+
+<aside class="notice">
+  <b>Authorization Header:</b>
+  <ul class="notice__list">
+        <li><code>Authorization: Bearer [JWT]</code></li>
+  </ul>
+</aside>
+
+<aside class="warning caution ">
+  <b>CONFIRMATION NEEDED:</b>
+  <ul class="notice__list">
+      <li>Need to confirm JSON response keys/values and formats</li>
+  </ul>
+</aside>
+
+<p><strong>This endpoint is coming soon.</strong></p>
+
+<p><strong>NOTES:</strong></p>
+
+<ul>
+<li>To get the User APIKEY, save that info when the User successfully logs in</li>
+<li>We will only return data for the current user logged in</li>
+<li>We will not return &quot;password&quot;, the interface will need add mock data.</li>
+<li><code>tasks</code> will be empty [] array if no actions</li>
+<li><code>notifications</code> will be empty [] array if no notifications</li>
+</ul>
+<h2 id='update-info'>Update Info</h2>
+<blockquote>
+<p>PUT: /users/[USER_APIKEY]</p>
+</blockquote>
+
+<pre class="highlight conf tab-conf"><code>// <span class="n">Coming</span> <span class="n">soon</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// Coming soon</span>
+</code></pre>
+
+<blockquote>
+<p>Success:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">jwt"</span><span class="pi">:</span> <span class="nv">null</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">2fa_required"</span><span class="pi">:</span> <span class="nv">false</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">message"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">User</span><span class="nv"> </span><span class="s">updated</span><span class="nv"> </span><span class="s">successfully,</span><span class="nv"> </span><span class="s">Re-confirmation</span><span class="nv"> </span><span class="s">needed</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">email"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">code_sent_message"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Email</span><span class="nv"> </span><span class="s">sent</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">t**t@e******.com"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">user"</span><span class="pi">:</span> <span class="pi">{</span>
+    <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">API,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">Identifier</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">Salesforce"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">full_name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Steve</span><span class="nv"> </span><span class="s">Example"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">first_name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Steve"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">last_name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Example"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">email"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">example@example.com"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">mask_email"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">e*****e@e******.com"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">phone"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">(555)</span><span class="nv"> </span><span class="s">555-5555"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">mask_phone"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">******5555"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">contact_2fa_preference"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">email"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">program_status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Active</span><span class="nv"> </span><span class="s">Client"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">bank_processor_url"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://www.processor_url.com/"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">balance"</span><span class="pi">:</span> <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">total_debt"</span><span class="pi">:</span> <span class="nv">5350.0</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">total_balance"</span><span class="pi">:</span> <span class="nv">4000.55</span>
+    <span class="pi">},</span>
+    <span class="s2">"</span><span class="s">next_drafts"</span><span class="pi">:</span> <span class="pi">[</span>
+      <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">API,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">Identifier</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">Salesforce"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">amount"</span><span class="pi">:</span> <span class="nv">100.0</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">date"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2018-10-15T16:05:03Z"</span>
+      <span class="pi">},</span>
+      <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">API,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">Identifier</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">Salesforce"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">amount"</span><span class="pi">:</span> <span class="nv">100.0</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">date"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2018-11-15T16:05:03Z"</span>
+      <span class="pi">}</span>
+    <span class="pi">],</span>
+    <span class="s2">"</span><span class="s">debts"</span><span class="pi">:</span> <span class="pi">[</span>
+      <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">API,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">Identifier</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">Salesforce"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Student</span><span class="nv"> </span><span class="s">Loan"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">active"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">debt"</span><span class="pi">:</span> <span class="nv">535.0</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">balance"</span><span class="pi">:</span> <span class="nv">535.0</span>
+      <span class="pi">}</span>
+    <span class="pi">],</span>
+    <span class="s2">"</span><span class="s">tasks"</span><span class="pi">:</span> <span class="pi">[</span>
+      <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">confirm_email"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Email</span><span class="nv"> </span><span class="s">verification</span><span class="nv"> </span><span class="s">needed"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Confirmation</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">sent</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">email,</span><span class="nv"> </span><span class="s">please</span><span class="nv"> </span><span class="s">confirm"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">task_options"</span><span class="pi">:</span> <span class="pi">{</span>
+          <span class="s2">"</span><span class="s">todo"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">TODO"</span><span class="pi">,</span>
+          <span class="s2">"</span><span class="s">actions"</span><span class="pi">:</span> <span class="pi">[</span>
+            <span class="s2">"</span><span class="s">send_2fa"</span><span class="pi">,</span>
+            <span class="s2">"</span><span class="s">confirm_2fa"</span>
+          <span class="pi">],</span>
+          <span class="s2">"</span><span class="s">confirmed_email"</span><span class="pi">:</span> <span class="nv">false</span><span class="pi">,</span>
+          <span class="s2">"</span><span class="s">expired"</span><span class="pi">:</span> <span class="nv">false</span><span class="pi">,</span>
+          <span class="s2">"</span><span class="s">expires"</span><span class="pi">:</span> <span class="nv">false</span>
+        <span class="pi">},</span>
+        <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">unconfirmed"</span>
+      <span class="pi">},</span>
+      <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">reschedule_nsf"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">NSF"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Draft</span><span class="nv"> </span><span class="s">failed,</span><span class="nv"> </span><span class="s">please</span><span class="nv"> </span><span class="s">re-schedule</span><span class="nv"> </span><span class="s">NSF</span><span class="nv"> </span><span class="s">payment"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">task_options"</span><span class="pi">:</span> <span class="pi">{</span>
+          <span class="s2">"</span><span class="s">todo"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">TODO"</span>
+        <span class="pi">},</span>
+        <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">NSF"</span>
+      <span class="pi">},</span>
+      <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">call_needed"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">On-Boarding</span><span class="nv"> </span><span class="s">Call</span><span class="nv"> </span><span class="s">Due"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Please</span><span class="nv"> </span><span class="s">call</span><span class="nv"> </span><span class="s">(111)</span><span class="nv"> </span><span class="s">111-1111"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">task_options"</span><span class="pi">:</span> <span class="pi">{</span>
+          <span class="s2">"</span><span class="s">phone_number"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">(111)</span><span class="nv"> </span><span class="s">111-1111"</span>
+        <span class="pi">},</span>
+        <span class="s2">"</span><span class="s">due_date"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2017-12-11T07:00:00Z"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Not</span><span class="nv"> </span><span class="s">Started"</span>
+      <span class="pi">},</span>
+      <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">call_needed"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Year</span><span class="nv"> </span><span class="s">2</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Q3</span><span class="nv"> </span><span class="s">Account</span><span class="nv"> </span><span class="s">Review</span><span class="nv"> </span><span class="s">Due"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Please</span><span class="nv"> </span><span class="s">call</span><span class="nv"> </span><span class="s">(111)</span><span class="nv"> </span><span class="s">111-1111"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">task_options"</span><span class="pi">:</span> <span class="pi">{</span>
+          <span class="s2">"</span><span class="s">phone_number"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">(111)</span><span class="nv"> </span><span class="s">111-1111"</span>
+        <span class="pi">},</span>
+        <span class="s2">"</span><span class="s">due_date"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2017-12-11T07:00:00Z"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Not</span><span class="nv"> </span><span class="s">Started"</span>
+      <span class="pi">},</span>
+      <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">call_needed"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">7</span><span class="nv"> </span><span class="s">Month</span><span class="nv"> </span><span class="s">Strategy</span><span class="nv"> </span><span class="s">Call</span><span class="nv"> </span><span class="s">Due"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Please</span><span class="nv"> </span><span class="s">call</span><span class="nv"> </span><span class="s">(111)</span><span class="nv"> </span><span class="s">111-1111"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">task_options"</span><span class="pi">:</span> <span class="pi">{</span>
+          <span class="s2">"</span><span class="s">phone_number"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">(111)</span><span class="nv"> </span><span class="s">111-1111"</span>
+        <span class="pi">},</span>
+        <span class="s2">"</span><span class="s">due_date"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2017-12-11T07:00:00Z"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Not</span><span class="nv"> </span><span class="s">Started"</span>
+      <span class="pi">},</span>
+      <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">offer"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">OFFER_TASK_APIKEY"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Offer-DDDDD"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Click</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">accept,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">call</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">decline"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">task_options"</span><span class="pi">:</span> <span class="pi">{</span>
+          <span class="s2">"</span><span class="s">phone_number"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">(555)</span><span class="nv"> </span><span class="s">555-5555"</span>
+        <span class="pi">},</span>
+        <span class="s2">"</span><span class="s">offer_amount"</span><span class="pi">:</span> <span class="nv">885.6</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">original_balance"</span><span class="pi">:</span> <span class="nv">2214</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">nds_creditor_info"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">NDS</span><span class="nv"> </span><span class="s">Current:</span><span class="nv"> </span><span class="s">company</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">LLC&lt;br&gt;NDS</span><span class="nv"> </span><span class="s">Original:</span><span class="nv"> </span><span class="s">Company/SYNCB"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">number_of_fee_payments"</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">number_of_payments"</span><span class="pi">:</span> <span class="nv">4</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">first_payment_date"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2018-06-22T00:00:00Z"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">last_payment_date"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2018-09-22T00:00:00Z"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Pending</span><span class="nv"> </span><span class="s">Client</span><span class="nv"> </span><span class="s">Approval"</span>
+      <span class="pi">},</span>
+      <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">poa"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">GT-DDDDDD"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Please</span><span class="nv"> </span><span class="s">sign</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">upload</span><span class="nv"> </span><span class="s">POA</span><span class="nv"> </span><span class="s">Form"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Letter</span><span class="nv"> </span><span class="s">Pending"</span>
+      <span class="pi">},</span>
+      <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">bank_change"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Change</span><span class="nv"> </span><span class="s">Bank</span><span class="nv"> </span><span class="s">Request</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Pending"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">This</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">probably</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">shown</span><span class="nv"> </span><span class="s">under</span><span class="nv"> </span><span class="s">Notifications</span><span class="nv"> </span><span class="s">since</span><span class="nv"> </span><span class="s">no</span><span class="nv"> </span><span class="s">action</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">made</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">User"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Completed"</span>
+      <span class="pi">}</span>
+    <span class="pi">],</span>
+    <span class="s2">"</span><span class="s">notifications"</span><span class="pi">:</span> <span class="pi">[</span>
+      <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">API,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">Identifier</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">Salesforce"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Example</span><span class="nv"> </span><span class="s">Notification"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">read"</span><span class="pi">:</span> <span class="nv">false</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">date"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2018-10-15T16:05:03Z"</span>
+      <span class="pi">}</span>
+    <span class="pi">],</span>
+    <span class="s2">"</span><span class="s">documents"</span><span class="pi">:</span> <span class="pi">[</span>
+      <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">bank_change"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">task_apikey"</span><span class="pi">:</span> <span class="nv">null</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Box</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">ID"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">filename.pdf"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">active"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">date_added"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2017-10-16T03:52:51Z"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">size"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0.23</span><span class="nv"> </span><span class="s">MB"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">download_url"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">url"</span>
+      <span class="pi">},</span>
+      <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">poa"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">task_apikey"</span><span class="pi">:</span> <span class="nv">null</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Box</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">ID"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">filename.pdf"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">active"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">date_added"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2017-10-16T03:52:46Z"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">size"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0.51</span><span class="nv"> </span><span class="s">MB"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">download_url"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">url"</span>
+      <span class="pi">},</span>
+      <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">add_debt"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">task_apikey"</span><span class="pi">:</span> <span class="nv">null</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Box</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">ID"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">filename.pdf"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">active"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">date_added"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2017-10-16T03:52:51Z"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">size"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0.03</span><span class="nv"> </span><span class="s">MB"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">download_url"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">url"</span>
+      <span class="pi">}</span>
+    <span class="pi">],</span>
+    <span class="s2">"</span><span class="s">blank_forms"</span><span class="pi">:</span> <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">bank_change"</span><span class="pi">:</span> <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Box</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">ID"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Change</span><span class="nv"> </span><span class="s">Bank</span><span class="nv"> </span><span class="s">Info</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">GCS.pdf"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="nv">null</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">date_added"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2018-06-22T21:19:14Z"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">size"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0.07</span><span class="nv"> </span><span class="s">MB"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">download_url"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">url"</span>
+      <span class="pi">}</span>
+    <span class="pi">}</span>
+  <span class="pi">}</span>
+<span class="pi">}</span>
+</code></pre>
+
+<blockquote>
+<p>Error:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">2fa_required"</span><span class="pi">:</span> <span class="s1">'</span><span class="s">sms'</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">error"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2FA</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">required,</span><span class="nv"> </span><span class="s">please</span><span class="nv"> </span><span class="s">resend</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">auth</span><span class="nv"> </span><span class="s">code"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">code_sent_message"</span><span class="pi">:</span>  <span class="s2">"</span><span class="s">Text</span><span class="nv"> </span><span class="s">message</span><span class="nv"> </span><span class="s">sent</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">******5555"</span>
+<span class="pi">}</span>
+</code></pre>
+
+<blockquote>
+<p>Error - Incorrect 2FA code:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">error"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2FA</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">invalid"</span>
+<span class="pi">}</span>
+</code></pre>
+
+<aside class="notice">
+  <b>Authorization Header:</b>
+  <ul class="notice__list">
+        <li><code>Authorization: Bearer [JWT]</code></li>
+  </ul>
+</aside>
+
+<ul>
+<li><strong>Required Fields</strong>
+
+<ul>
+<li>auth_code</li>
+<li>password - <em>if <code>new_password</code> is set</em></li>
+<li>new_password_confirmation - <em>if <code>new_password</code> is set</em></li>
+</ul></li>
+<li><strong>Optional fields:</strong>
+
+<ul>
+<li>email</li>
+<li>phone</li>
+<li>contact_2fa_preference</li>
+<li>new_password</li>
+</ul></li>
+</ul>
+
+<p><strong>This endpoint is coming soon.</strong></p>
+
+<p><strong>NOTES:</strong></p>
+
+<ul>
+<li>You&#39;ll need to hit this endpoint twice:
+
+<ul>
+<li>1st time (you won&#39;t have 2FA <code>auth_code</code> yet) will reject the request and create/send the 2FA to the User</li>
+<li>2nd attempt you&#39;ll resend with the <code>auth_code</code></li>
+</ul></li>
+<li>If <code>contact_2fa_preference</code> changes to an unconfirmed <code>email</code>/<code>phone</code>, or if <code>email</code>/<code>phone</code> are updated to a new value and are needed for <code>contact_2fa_preference</code>
+
+<ul>
+<li>2FA will be required after the successful update to confirm new <code>email</code>/<code>phone</code> or <code>contact_2fa_preference</code></li>
+</ul></li>
+</ul>

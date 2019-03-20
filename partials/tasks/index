@@ -1,0 +1,600 @@
+<h2 id='task-reschedule-nsf'>Task - Reschedule NSF</h2>
+<blockquote>
+<p>POST: /tasks/reschedule_nsf</p>
+</blockquote>
+
+<pre class="highlight conf tab-conf"><code>// <span class="n">Coming</span> <span class="n">soon</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// Coming soon</span>
+</code></pre>
+
+<blockquote>
+<p>Success:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">jwt"</span><span class="pi">:</span>          <span class="pi">,</span>
+  <span class="s2">"</span><span class="s">2fa_required"</span><span class="pi">:</span> <span class="nv">false</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">message"</span><span class="pi">:</span>      <span class="s2">"</span><span class="s">Makeup</span><span class="nv"> </span><span class="s">payment</span><span class="nv"> </span><span class="s">added</span><span class="nv"> </span><span class="s">successfully"</span>
+<span class="pi">}</span>
+</code></pre>
+
+<blockquote>
+<p>Error:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">error"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Unable</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">get</span><span class="nv"> </span><span class="s">failed</span><span class="nv"> </span><span class="s">payment</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">non-NSF</span><span class="nv"> </span><span class="s">Program"</span>
+<span class="pi">}</span>
+</code></pre>
+
+<aside class="notice">
+  <b>Authorization Header:</b>
+  <ul class="notice__list">
+        <li><code>Authorization: Bearer [JWT]</code></li>
+  </ul>
+</aside>
+
+<ul>
+<li><strong>Required fields:</strong>
+
+<ul>
+<li>schedule_date
+
+<ul>
+<li>Format: &quot;YYYY-MM-DD&quot;</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p><strong>NOTES:</strong></p>
+
+<ul>
+<li><code>schedule_date</code> must be &gt;= 72 hours from now (UTC time)</li>
+</ul>
+<h2 id='task-add-funds'>Task - Add Funds</h2>
+<blockquote>
+<p>POST: /tasks/add_funds</p>
+</blockquote>
+
+<pre class="highlight conf tab-conf"><code>// <span class="n">Coming</span> <span class="n">soon</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// Coming soon</span>
+</code></pre>
+
+<blockquote>
+<p>Success:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">jwt"</span><span class="pi">:</span>          <span class="pi">,</span>
+  <span class="s2">"</span><span class="s">2fa_required"</span><span class="pi">:</span> <span class="nv">false</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">message"</span><span class="pi">:</span>      <span class="s2">"</span><span class="s">Additional</span><span class="nv"> </span><span class="s">funds</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">submitted"</span>
+<span class="pi">}</span>
+</code></pre>
+
+<blockquote>
+<p>Error:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">error"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Unable</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">get</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">adding</span><span class="nv"> </span><span class="s">additional</span><span class="nv"> </span><span class="s">funds"</span>
+<span class="pi">}</span>
+</code></pre>
+
+<aside class="notice">
+  <b>Authorization Header:</b>
+  <ul class="notice__list">
+        <li><code>Authorization: Bearer [JWT]</code></li>
+  </ul>
+</aside>
+
+<ul>
+<li><strong>Required fields:</strong>
+
+<ul>
+<li>amount
+
+<ul>
+<li>Formats: 100.50, 100.5, 100</li>
+</ul></li>
+<li>schedule_date
+
+<ul>
+<li>Format: &quot;YYYY-MM-DD&quot;</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p><strong>NOTES:</strong></p>
+
+<ul>
+<li>This submits a request to add additional funds (<code>amount</code> and <code>schedule_date</code>) that company will review/process manually</li>
+<li><code>schedule_date</code> must be &gt;= 72 hours from now (UTC time)</li>
+</ul>
+<h2 id='task-adjust-upcoming-draft-date'>Task - Adjust Upcoming Draft Date</h2>
+<blockquote>
+<p>POST: /tasks/reschedule_upcoming_draft</p>
+</blockquote>
+
+<pre class="highlight conf tab-conf"><code>// <span class="n">Coming</span> <span class="n">soon</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// Coming soon</span>
+</code></pre>
+
+<blockquote>
+<p>Success:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">jwt"</span><span class="pi">:</span>          <span class="pi">,</span>
+  <span class="s2">"</span><span class="s">2fa_required"</span><span class="pi">:</span> <span class="nv">false</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">message"</span><span class="pi">:</span>      <span class="s2">"</span><span class="s">Draft</span><span class="nv"> </span><span class="s">successfully</span><span class="nv"> </span><span class="s">rescheduled"</span>
+<span class="pi">}</span>
+</code></pre>
+
+<blockquote>
+<p>Error - Draft date is within 72 hours:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">error"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Unable</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">reschedule</span><span class="nv"> </span><span class="s">draft,</span><span class="nv"> </span><span class="s">please</span><span class="nv"> </span><span class="s">contact</span><span class="nv"> </span><span class="s">support"</span>
+<span class="pi">}</span>
+</code></pre>
+
+<blockquote>
+<p>Error - Schedule Date is past the following draft date:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">error"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Schedule</span><span class="nv"> </span><span class="s">date</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">less</span><span class="nv"> </span><span class="s">than</span><span class="nv"> </span><span class="s">July</span><span class="nv"> </span><span class="s">30,</span><span class="nv"> </span><span class="s">2018"</span>
+<span class="pi">}</span>
+</code></pre>
+
+<aside class="notice">
+  <b>Authorization Header:</b>
+  <ul class="notice__list">
+        <li><code>Authorization: Bearer [JWT]</code></li>
+  </ul>
+</aside>
+
+<ul>
+<li><strong>Required fields:</strong>
+
+<ul>
+<li>schedule_date
+
+<ul>
+<li>Format: &quot;YYYY-MM-DD&quot;</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p><strong>NOTES:</strong></p>
+
+<ul>
+<li><code>schedule_date</code> must be &gt;= 72 hours from now (UTC time), and &lt; the following draft date</li>
+</ul>
+<h2 id='task-accept-offer-pending-settlement-authorization'>Task - Accept Offer (Pending Settlement Authorization)</h2>
+<blockquote>
+<p>GET: /tasks/offers/[OFFER_APIKEY]/accept</p>
+</blockquote>
+
+<pre class="highlight conf tab-conf"><code>// <span class="n">Coming</span> <span class="n">soon</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// Coming soon</span>
+</code></pre>
+
+<blockquote>
+<p>Success:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">jwt"</span><span class="pi">:</span>          <span class="pi">,</span>
+  <span class="s2">"</span><span class="s">2fa_required"</span><span class="pi">:</span> <span class="nv">false</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">message"</span><span class="pi">:</span>      <span class="s2">"</span><span class="s">Offer</span><span class="nv"> </span><span class="s">accepted"</span>
+<span class="pi">}</span>
+</code></pre>
+
+<blockquote>
+<p>Error</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">error"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Unable</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">accept</span><span class="nv"> </span><span class="s">offer,</span><span class="nv"> </span><span class="s">please</span><span class="nv"> </span><span class="s">try</span><span class="nv"> </span><span class="s">again</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">contact</span><span class="nv"> </span><span class="s">us</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">you're</span><span class="nv"> </span><span class="s">having</span><span class="nv"> </span><span class="s">issues.</span><span class="nv"> </span><span class="s">We</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">reached</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">href=</span><span class="se">\"</span><span class="s">tel:(555)</span><span class="nv"> </span><span class="s">555-5555</span><span class="se">\"</span><span class="s">&gt;(555)</span><span class="nv"> </span><span class="s">555-5555&lt;/a&gt;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">href=</span><span class="se">\"</span><span class="s">mailto:cs@example.com</span><span class="se">\"</span><span class="s">&gt;cs@example.com&lt;/a&gt;"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">error_phone"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">(555)</span><span class="nv"> </span><span class="s">555-5555"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">error_email"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">cs@example.com"</span>
+<span class="pi">}</span>
+</code></pre>
+
+<aside class="notice">
+  <b>Authorization Header:</b>
+  <ul class="notice__list">
+        <li><code>Authorization: Bearer [JWT]</code></li>
+  </ul>
+</aside>
+<h2 id='task-add-debt'>Task - Add Debt</h2>
+<blockquote>
+<p>POST: /tasks/add_debt</p>
+</blockquote>
+
+<pre class="highlight conf tab-conf"><code>// <span class="n">Coming</span> <span class="n">soon</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// Coming soon</span>
+</code></pre>
+
+<blockquote>
+<p>Success:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">jwt"</span><span class="pi">:</span>          <span class="pi">,</span>
+  <span class="s2">"</span><span class="s">2fa_required"</span><span class="pi">:</span> <span class="nv">false</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">message"</span><span class="pi">:</span>      <span class="s2">"</span><span class="s">Creditor</span><span class="nv"> </span><span class="s">statement</span><span class="nv"> </span><span class="s">uploaded</span><span class="nv"> </span><span class="s">successfully"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">document"</span><span class="pi">:</span> <span class="pi">{</span>
+    <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span>       <span class="s2">"</span><span class="s">Box</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">ID"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span>         <span class="s2">"</span><span class="s">filename.pdf"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span>       <span class="s2">"</span><span class="s">active"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">date_added"</span><span class="pi">:</span>   <span class="s2">"</span><span class="s">2017-10-16T03:52:51Z"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">size"</span><span class="pi">:</span>         <span class="s2">"</span><span class="s">0.03</span><span class="nv"> </span><span class="s">MB"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">download_url"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">url"</span>
+  <span class="pi">}</span>
+<span class="pi">}</span>
+</code></pre>
+
+<blockquote>
+<p>Error:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">error"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">File</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">already</span><span class="nv"> </span><span class="s">used,</span><span class="nv"> </span><span class="s">please</span><span class="nv"> </span><span class="s">upload</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">new</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">name"</span>
+<span class="pi">}</span>
+</code></pre>
+
+<aside class="notice">
+  <b>Authorization Header:</b>
+  <ul class="notice__list">
+        <li><code>Authorization: Bearer [JWT]</code></li>
+  </ul>
+</aside>
+
+<ul>
+<li><strong>Required fields:</strong>
+
+<ul>
+<li>file</li>
+</ul></li>
+</ul>
+
+<p><strong>NOTES:</strong></p>
+
+<ul>
+<li><code>file</code> must be most recent creditor statement in PDF format</li>
+</ul>
+<h2 id='task-upload-bank-change-form'>Task - Upload Bank Change form</h2>
+<blockquote>
+<p>POST: /tasks/bank_change</p>
+</blockquote>
+
+<pre class="highlight conf tab-conf"><code>// <span class="n">Coming</span> <span class="n">soon</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// Coming soon</span>
+</code></pre>
+
+<blockquote>
+<p>Success:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">jwt"</span><span class="pi">:</span>          <span class="pi">,</span>
+  <span class="s2">"</span><span class="s">2fa_required"</span><span class="pi">:</span> <span class="nv">false</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">message"</span><span class="pi">:</span>      <span class="s2">"</span><span class="s">Bank</span><span class="nv"> </span><span class="s">Change</span><span class="nv"> </span><span class="s">form</span><span class="nv"> </span><span class="s">uploaded</span><span class="nv"> </span><span class="s">successfully"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">document"</span><span class="pi">:</span> <span class="pi">{</span>
+    <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span>       <span class="s2">"</span><span class="s">Box</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">ID"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span>         <span class="s2">"</span><span class="s">filename.pdf"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span>       <span class="s2">"</span><span class="s">active"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">date_added"</span><span class="pi">:</span>   <span class="s2">"</span><span class="s">2017-10-16T03:52:51Z"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">size"</span><span class="pi">:</span>         <span class="s2">"</span><span class="s">0.03</span><span class="nv"> </span><span class="s">MB"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">download_url"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">url"</span>
+  <span class="pi">}</span>
+<span class="pi">}</span>
+</code></pre>
+
+<blockquote>
+<p>Error:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">error"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">File</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">already</span><span class="nv"> </span><span class="s">used,</span><span class="nv"> </span><span class="s">please</span><span class="nv"> </span><span class="s">upload</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">new</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">name"</span>
+<span class="pi">}</span>
+</code></pre>
+
+<aside class="notice">
+  <b>Authorization Header:</b>
+  <ul class="notice__list">
+        <li><code>Authorization: Bearer [JWT]</code></li>
+  </ul>
+</aside>
+
+<ul>
+<li><strong>Required fields:</strong>
+
+<ul>
+<li>file</li>
+</ul></li>
+</ul>
+
+<p><strong>NOTES:</strong></p>
+
+<ul>
+<li><code>file</code> must be a signed Change Bank form for the Users given Bank Processor (CFT or GCS). To get the correct blank form, use the <code>bank_change</code> form found in the User object <code>blank_forms</code> section.</li>
+</ul>
+<h2 id='task-upload-poa-form'>Task - Upload POA form</h2>
+<blockquote>
+<p>POST: /tasks/poa</p>
+</blockquote>
+
+<pre class="highlight conf tab-conf"><code>// <span class="n">Coming</span> <span class="n">soon</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// Coming soon</span>
+</code></pre>
+
+<blockquote>
+<p>Success:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">jwt"</span><span class="pi">:</span>          <span class="pi">,</span>
+  <span class="s2">"</span><span class="s">2fa_required"</span><span class="pi">:</span> <span class="nv">false</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">message"</span><span class="pi">:</span>      <span class="s2">"</span><span class="s">POA</span><span class="nv"> </span><span class="s">form</span><span class="nv"> </span><span class="s">uploaded</span><span class="nv"> </span><span class="s">successfully"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">document"</span><span class="pi">:</span> <span class="pi">{</span>
+    <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span>       <span class="s2">"</span><span class="s">Box</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">ID"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span>         <span class="s2">"</span><span class="s">filename.pdf"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span>       <span class="s2">"</span><span class="s">active"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">date_added"</span><span class="pi">:</span>   <span class="s2">"</span><span class="s">2017-10-16T03:52:51Z"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">size"</span><span class="pi">:</span>         <span class="s2">"</span><span class="s">0.03</span><span class="nv"> </span><span class="s">MB"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">download_url"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">url"</span>
+  <span class="pi">}</span>
+<span class="pi">}</span>
+</code></pre>
+
+<blockquote>
+<p>Error:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">error"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">File</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">already</span><span class="nv"> </span><span class="s">used,</span><span class="nv"> </span><span class="s">please</span><span class="nv"> </span><span class="s">upload</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">new</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">name"</span>
+<span class="pi">}</span>
+</code></pre>
+
+<aside class="notice">
+  <b>Authorization Header:</b>
+  <ul class="notice__list">
+        <li><code>Authorization: Bearer [JWT]</code></li>
+  </ul>
+</aside>
+
+<ul>
+<li><strong>Required fields:</strong>
+
+<ul>
+<li>file</li>
+</ul></li>
+</ul>
+
+<p><strong>NOTES:</strong></p>
+
+<ul>
+<li><code>file</code> must be a signed Power of Attorney form. To get the correct form, company will need to send this via letter or email.</li>
+</ul>
+<h2 id='get-all-task-types'>Get All Task Types</h2>
+<blockquote>
+<p>GET: /tasks</p>
+</blockquote>
+
+<pre class="highlight conf tab-conf"><code>// <span class="n">Coming</span> <span class="n">soon</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// Coming soon</span>
+</code></pre>
+
+<blockquote>
+<p>Success:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">jwt"</span><span class="pi">:</span> <span class="nv">null</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">tasks"</span><span class="pi">:</span> <span class="pi">[</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">confirm_email"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Email</span><span class="nv"> </span><span class="s">verification</span><span class="nv"> </span><span class="s">needed"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Confirmation</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">sent</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">email,</span><span class="nv"> </span><span class="s">please</span><span class="nv"> </span><span class="s">confirm"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">task_options"</span><span class="pi">:</span> <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">todo"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">TODO"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">actions"</span><span class="pi">:</span> <span class="pi">[</span>
+          <span class="s2">"</span><span class="s">send_2fa"</span><span class="pi">,</span>
+          <span class="s2">"</span><span class="s">confirm_2fa"</span>
+        <span class="pi">],</span>
+        <span class="s2">"</span><span class="s">confirmed_email"</span><span class="pi">:</span> <span class="nv">false</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">expired"</span><span class="pi">:</span> <span class="nv">false</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">expires"</span><span class="pi">:</span> <span class="nv">false</span>
+      <span class="pi">},</span>
+      <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">unconfirmed"</span>
+    <span class="pi">},</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">reschedule_nsf"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">NSF"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Draft</span><span class="nv"> </span><span class="s">failed,</span><span class="nv"> </span><span class="s">please</span><span class="nv"> </span><span class="s">re-schedule</span><span class="nv"> </span><span class="s">NSF</span><span class="nv"> </span><span class="s">payment"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">task_options"</span><span class="pi">:</span> <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">todo"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">TODO"</span>
+      <span class="pi">},</span>
+      <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">NSF"</span>
+    <span class="pi">},</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">call_needed"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">On-Boarding</span><span class="nv"> </span><span class="s">Call</span><span class="nv"> </span><span class="s">Due"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Please</span><span class="nv"> </span><span class="s">call</span><span class="nv"> </span><span class="s">(111)</span><span class="nv"> </span><span class="s">111-1111"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">task_options"</span><span class="pi">:</span> <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">phone_number"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">(111)</span><span class="nv"> </span><span class="s">111-1111"</span>
+      <span class="pi">},</span>
+      <span class="s2">"</span><span class="s">due_date"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2017-12-11T07:00:00Z"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Not</span><span class="nv"> </span><span class="s">Started"</span>
+    <span class="pi">},</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">call_needed"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Year</span><span class="nv"> </span><span class="s">2</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Q3</span><span class="nv"> </span><span class="s">Account</span><span class="nv"> </span><span class="s">Review</span><span class="nv"> </span><span class="s">Due"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Please</span><span class="nv"> </span><span class="s">call</span><span class="nv"> </span><span class="s">(111)</span><span class="nv"> </span><span class="s">111-1111"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">task_options"</span><span class="pi">:</span> <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">phone_number"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">(111)</span><span class="nv"> </span><span class="s">111-1111"</span>
+      <span class="pi">},</span>
+      <span class="s2">"</span><span class="s">due_date"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2017-12-11T07:00:00Z"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Not</span><span class="nv"> </span><span class="s">Started"</span>
+    <span class="pi">},</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">call_needed"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">7</span><span class="nv"> </span><span class="s">Month</span><span class="nv"> </span><span class="s">Strategy</span><span class="nv"> </span><span class="s">Call</span><span class="nv"> </span><span class="s">Due"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Please</span><span class="nv"> </span><span class="s">call</span><span class="nv"> </span><span class="s">(111)</span><span class="nv"> </span><span class="s">111-1111"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">task_options"</span><span class="pi">:</span> <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">phone_number"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">(111)</span><span class="nv"> </span><span class="s">111-1111"</span>
+      <span class="pi">},</span>
+      <span class="s2">"</span><span class="s">due_date"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2017-12-11T07:00:00Z"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Not</span><span class="nv"> </span><span class="s">Started"</span>
+    <span class="pi">},</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">offer"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">OFFER_TASK_APIKEY"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Offer-DDDDD"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Click</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">accept,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">call</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">decline"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">task_options"</span><span class="pi">:</span> <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">phone_number"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">(555)</span><span class="nv"> </span><span class="s">555-5555"</span>
+      <span class="pi">},</span>
+      <span class="s2">"</span><span class="s">offer_amount"</span><span class="pi">:</span> <span class="nv">885.6</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">original_balance"</span><span class="pi">:</span> <span class="nv">2214</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">nds_creditor_info"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">NDS</span><span class="nv"> </span><span class="s">Current:</span><span class="nv"> </span><span class="s">company</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">LLC&lt;br&gt;NDS</span><span class="nv"> </span><span class="s">Original:</span><span class="nv"> </span><span class="s">Company/SYNCB"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">number_of_fee_payments"</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">number_of_payments"</span><span class="pi">:</span> <span class="nv">4</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">first_payment_date"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2018-06-22T00:00:00Z"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">last_payment_date"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2018-09-22T00:00:00Z"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Pending</span><span class="nv"> </span><span class="s">Client</span><span class="nv"> </span><span class="s">Approval"</span>
+    <span class="pi">},</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">poa"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">GT-DDDDDD"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Please</span><span class="nv"> </span><span class="s">sign</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">upload</span><span class="nv"> </span><span class="s">POA</span><span class="nv"> </span><span class="s">Form"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Letter</span><span class="nv"> </span><span class="s">Pending"</span>
+    <span class="pi">},</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">bank_change"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Change</span><span class="nv"> </span><span class="s">Bank</span><span class="nv"> </span><span class="s">Request</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Pending"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">This</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">probably</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">shown</span><span class="nv"> </span><span class="s">under</span><span class="nv"> </span><span class="s">Notifications</span><span class="nv"> </span><span class="s">since</span><span class="nv"> </span><span class="s">no</span><span class="nv"> </span><span class="s">action</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">made</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">User"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Completed"</span>
+    <span class="pi">},</span>
+    <span class="pi">{</span>
+    <span class="pi">}</span>
+  <span class="pi">]</span>
+<span class="pi">}</span>
+</code></pre>
+
+<aside class="notice">
+  <b>Authorization Header:</b>
+  <ul class="notice__list">
+        <li><code>Authorization: Bearer [JWT]</code></li>
+  </ul>
+</aside>
+
+<ul>
+<li><strong>Task Types:</strong>
+
+<ul>
+<li><code>confirm_email</code></li>
+<li><code>reschedule_nsf</code></li>
+<li><code>reschedule_upcoming_draft</code></li>
+<li><code>call_needed</code></li>
+<li><code>offer</code></li>
+<li><code>poa</code></li>
+<li><code>bank_change</code></li>
+<li><code>add_funds</code></li>
+<li><code>add_debt</code></li>
+</ul></li>
+</ul>
+<h2 id='get-all-of-task-type'>Get All of Task Type</h2>
+<blockquote>
+<p>GET: /tasks/[TASK_TYPE]</p>
+</blockquote>
+
+<pre class="highlight conf tab-conf"><code>// <span class="n">Coming</span> <span class="n">soon</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// Coming soon</span>
+</code></pre>
+
+<blockquote>
+<p>Success - call_needed Task Type:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">jwt"</span><span class="pi">:</span> <span class="nv">null</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">tasks"</span><span class="pi">:</span> <span class="pi">[</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">call_needed"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">On-Boarding</span><span class="nv"> </span><span class="s">Call</span><span class="nv"> </span><span class="s">Due"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Please</span><span class="nv"> </span><span class="s">call</span><span class="nv"> </span><span class="s">(111)</span><span class="nv"> </span><span class="s">111-1111"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">task_options"</span><span class="pi">:</span> <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">phone_number"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">(111)</span><span class="nv"> </span><span class="s">111-1111"</span>
+      <span class="pi">},</span>
+      <span class="s2">"</span><span class="s">due_date"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2017-12-11T07:00:00Z"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Not</span><span class="nv"> </span><span class="s">Started"</span>
+    <span class="pi">},</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">call_needed"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Year</span><span class="nv"> </span><span class="s">2</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Q3</span><span class="nv"> </span><span class="s">Account</span><span class="nv"> </span><span class="s">Review</span><span class="nv"> </span><span class="s">Due"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Please</span><span class="nv"> </span><span class="s">call</span><span class="nv"> </span><span class="s">(111)</span><span class="nv"> </span><span class="s">111-1111"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">task_options"</span><span class="pi">:</span> <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">phone_number"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">(111)</span><span class="nv"> </span><span class="s">111-1111"</span>
+      <span class="pi">},</span>
+      <span class="s2">"</span><span class="s">due_date"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2017-12-11T07:00:00Z"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Not</span><span class="nv"> </span><span class="s">Started"</span>
+    <span class="pi">},</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">task_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">call_needed"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">7</span><span class="nv"> </span><span class="s">Month</span><span class="nv"> </span><span class="s">Strategy</span><span class="nv"> </span><span class="s">Call</span><span class="nv"> </span><span class="s">Due"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Please</span><span class="nv"> </span><span class="s">call</span><span class="nv"> </span><span class="s">(111)</span><span class="nv"> </span><span class="s">111-1111"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">task_options"</span><span class="pi">:</span> <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">phone_number"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">(111)</span><span class="nv"> </span><span class="s">111-1111"</span>
+      <span class="pi">},</span>
+      <span class="s2">"</span><span class="s">due_date"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2017-12-11T07:00:00Z"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Not</span><span class="nv"> </span><span class="s">Started"</span>
+    <span class="pi">}</span>
+  <span class="pi">]</span>
+<span class="pi">}</span>
+</code></pre>
+
+<aside class="notice">
+  <b>Authorization Header:</b>
+  <ul class="notice__list">
+        <li><code>Authorization: Bearer [JWT]</code></li>
+  </ul>
+</aside>
+
+<aside class="warning caution ">
+  <b>CONFIRMATION NEEDED:</b>
+  <ul class="notice__list">
+      <li>Chris needs to work with company on determining what 'Group Tasks & Tasks' we return/use for Users</li>
+  </ul>
+</aside>
+
+<ul>
+<li><strong>Task Types:</strong>
+
+<ul>
+<li><code>confirm_email</code></li>
+<li><code>reschedule_nsf</code></li>
+<li><code>reschedule_upcoming_draft</code></li>
+<li><code>call_needed</code></li>
+<li><code>offer</code></li>
+<li><code>poa</code></li>
+<li><code>bank_change</code></li>
+<li><code>add_funds</code></li>
+<li><code>add_debt</code></li>
+</ul></li>
+</ul>
+
+<p><strong>This endpoint is coming soon.</strong></p>

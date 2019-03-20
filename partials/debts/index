@@ -1,0 +1,124 @@
+<h2 id='get-debts'>Get Debts</h2>
+<blockquote>
+<p>GET: /debts</p>
+</blockquote>
+
+<pre class="highlight conf tab-conf"><code>// <span class="n">Coming</span> <span class="n">soon</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// Coming soon</span>
+</code></pre>
+
+<blockquote>
+<p>Success:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">jwt"</span><span class="pi">:</span> <span class="nv">null</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">balance"</span><span class="pi">:</span> <span class="pi">{</span>
+    <span class="s2">"</span><span class="s">total_debt"</span><span class="pi">:</span> <span class="nv">5350.2</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">total_balance"</span><span class="pi">:</span> <span class="nv">4000.0</span>
+  <span class="pi">},</span>
+  <span class="s2">"</span><span class="s">debts"</span><span class="pi">:</span> <span class="pi">[</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">API,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">Identifier</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">Salesforce"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Student</span><span class="nv"> </span><span class="s">Loan"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">active"</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">debt"</span><span class="pi">:</span> <span class="nv">350.0</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">balance"</span><span class="pi">:</span> <span class="nv">350.0</span>
+    <span class="pi">},</span>
+    <span class="pi">{</span>
+    <span class="pi">}</span>
+  <span class="pi">]</span>
+<span class="pi">}</span>
+</code></pre>
+
+<aside class="notice">
+  <b>Authorization Header:</b>
+  <ul class="notice__list">
+        <li><code>Authorization: Bearer [JWT]</code></li>
+  </ul>
+</aside>
+
+<aside class="warning caution ">
+  <b>CONFIRMATION NEEDED:</b>
+  <ul class="notice__list">
+      <li>Need to confirm JSON response keys/values and formats</li>
+  </ul>
+</aside>
+
+<p><strong>This endpoint is coming soon.</strong></p>
+<h2 id='show-debt'>Show Debt</h2>
+<blockquote>
+<p>GET: /debts/[DEBT_APIKEY]</p>
+</blockquote>
+
+<pre class="highlight conf tab-conf"><code>// <span class="n">Coming</span> <span class="n">soon</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// Coming soon</span>
+</code></pre>
+
+<blockquote>
+<p>Success:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">jwt"</span><span class="pi">:</span> <span class="nv">null</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">API,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">Identifier</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">Salesforce"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Student</span><span class="nv"> </span><span class="s">Loan"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">active"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">debt"</span><span class="pi">:</span> <span class="nv">350.0</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">balance"</span><span class="pi">:</span> <span class="nv">350.0</span>
+<span class="pi">}</span>
+</code></pre>
+
+<aside class="notice">
+  <b>Authorization Header:</b>
+  <ul class="notice__list">
+        <li><code>Authorization: Bearer [JWT]</code></li>
+  </ul>
+</aside>
+
+<aside class="warning caution ">
+  <b>CONFIRMATION NEEDED:</b>
+  <ul class="notice__list">
+      <li>Need to confirm JSON response keys/values and formats</li>
+  </ul>
+</aside>
+
+<p><strong>This endpoint is coming soon.</strong></p>
+<h2 id='new-debt-request'>New Debt (Request)</h2>
+<blockquote>
+<p>POST: /debts</p>
+</blockquote>
+
+<pre class="highlight conf tab-conf"><code>// <span class="n">Coming</span> <span class="n">soon</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="c1">// Coming soon</span>
+</code></pre>
+
+<blockquote>
+<p>Success:</p>
+</blockquote>
+
+<pre class="highlight yaml tab-yaml"><code><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">jwt"</span><span class="pi">:</span> <span class="nv">null</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">apikey"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">APIKEY</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">API,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">Identifier</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">Salesforce"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Student</span><span class="nv"> </span><span class="s">Loan</span><span class="nv"> </span><span class="s">2"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">pending"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">debt"</span><span class="pi">:</span> <span class="nv">3500.0</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">balance"</span><span class="pi">:</span> <span class="nv">3500.0</span>
+<span class="pi">}</span>
+</code></pre>
+
+<aside class="notice">
+  <b>Authorization Header:</b>
+  <ul class="notice__list">
+        <li><code>Authorization: Bearer [JWT]</code></li>
+  </ul>
+</aside>
+
+<aside class="warning caution ">
+  <b>CONFIRMATION NEEDED:</b>
+  <ul class="notice__list">
+      <li>Need to confirm JSON response keys/values and formats</li>
+  </ul>
+</aside>
+
+<p><strong>This endpoint is coming soon.</strong></p>
