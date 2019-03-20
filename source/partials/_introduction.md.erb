@@ -1,5 +1,14 @@
 Welcome to the API. Each **"Application"** that needs to access this API will be setup with their own **"Company APIKEY"**. This will make the app unique for the Company-specific Users data.
 
+**Overview of API:**
+
+This API is an "in-between" project that connects with "Application" company's Salesforce (SF) + Boxr + Twilio data.
+User's will manage their payments, notifications & alerts, and legal documents here so customer support won't need to handle everything on calls.
+
+User will sign up, SF verifies User exists for the given "Application" company (SF account), account is created, Two-Factor Authentication is setup with User's phone, access to SF + Boxr data granted once logged in.
+
+Purpose of User portal is to reduce calls for all payment/notification/document management/other required actions that don't need to happen over the phone. This API creates the in-between connections needed to simplify the company's custom SF, Boxr, and Twilio processes. Company uses custom logic within their SF account, in which they have some custom SF API endpoints that we connect to. This API will not work out-of-the-box with any SF account, as it'll need to be customized for their specific needs.
+
 **The basic API flow will follow these steps:**
 
 1. **New company server**
